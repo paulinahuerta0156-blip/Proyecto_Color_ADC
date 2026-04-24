@@ -1,0 +1,13643 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5-2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Paulina\Desktop\Practicas_Microcontroladores\Proyecto_Color_ADC\build\..elf C:\Users\Paulina\Desktop\Practicas_Microcontroladores\Proyecto_Color_ADC\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5-2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-598-gbc7a18fe63 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 23 2026 20:30:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09914h ( 39188) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001993c vaddr=3ffb0000 size=02834h ( 10292) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001c178 vaddr=40080000 size=03ea0h ( 16032) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=106e4h ( 67300) map[0m
+[0;32mI (135) esp_image: segment 4: paddr=0003070c vaddr=40083ea0 size=08f78h ( 36728) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=0003968c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (176) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (179) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     .[0m
+[0;32mI (186) app_init: App version:      1[0m
+[0;32mI (189) app_init: Compile time:     Apr 23 2026 20:29:20[0m
+[0;32mI (194) app_init: ELF file SHA256:  92da41352...[0m
+[0;32mI (198) app_init: ESP-IDF:          v5.5.2-598-gbc7a18fe63[0m
+[0;32mI (204) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (207) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (211) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (216) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (222) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 3FFB3100 len 0002CF00 (179 KiB): DRAM[0m
+[0;32mI (232) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (237) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 4008CE18 len 000131E8 (76 KiB): IRAM[0m
+[0;32mI (250) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (255) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (267) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+Inicio prueba RGB + sensor
+Rojo: 141
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 143
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 141
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 132
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 139
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 139
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 133
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 137
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 135
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 127
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 133
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 138
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 129
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 129
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 133
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 129
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 180
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 120
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 105
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 101
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 139
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 130
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 149
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 131
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 130
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 108
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 99
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 102
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 106
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 102
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 98
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 101
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 103
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 105
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 133
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 131
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 135
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 131
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 135
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 134
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 130
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 129
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 133
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 99
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 95
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 97
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 89
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 94
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 91
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 87
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 92
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 96
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 83
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 149
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 97
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 99
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 91
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 97
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 124
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 131
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 102
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 108
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 124
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 125
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 120
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 125
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 108
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 80
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 108
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 107
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 109
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 115
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 120
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 144
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 147
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 154
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 120
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 82
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 125
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 68
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 110
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 119
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 123
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 121
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 116
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 117
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 118
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 235
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 168
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 112
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 113
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 122
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 285
+Verde: 91
+Azul: 94
+----------------------
+Rojo: 296
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2311
+Verde: 2293
+Azul: 2329
+----------------------
+Rojo: 178
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 114
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4048
+Verde: 1681
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4034
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 507
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 87
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 86
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 163
+Azul: 593
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 33
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4080
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 391
+Verde: 193
+Azul: 122
+----------------------
+Rojo: 1102
+Verde: 432
+Azul: 161
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3191
+Verde: 4011
+Azul: 4090
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1040
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 111
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 40
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 33
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 7
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 8
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 5
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 10
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 15
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 65
+Verde: 13
+Azul: 20
+----------------------
+Rojo: 80
+Verde: 6
+Azul: 1
+----------------------
+Rojo: 71
+Verde: 9
+Azul: 13
+----------------------
+Rojo: 44
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 39
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 37
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 37
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 10
+Azul: 30
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 14
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 7
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 7
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 9
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 147
+Verde: 80
+Azul: 75
+----------------------
+Rojo: 89
+Verde: 22
+Azul: 28
+----------------------
+Rojo: 46
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 36
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 28
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 17
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 13
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3995
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 1278
+Verde: 1862
+Azul: 3979
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 44
+Verde: 0
+Azul: 6
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 656
+Verde: 116
+Azul: 328
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 92
+Verde: 45
+Azul: 45
+----------------------
+Rojo: 4
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 47
+----------------------
+Rojo: 94
+Verde: 38
+Azul: 42
+----------------------
+Rojo: 98
+Verde: 42
+Azul: 37
+----------------------
+Rojo: 95
+Verde: 38
+Azul: 41
+----------------------
+Rojo: 99
+Verde: 39
+Azul: 43
+----------------------
+Rojo: 107
+Verde: 49
+Azul: 48
+----------------------
+Rojo: 107
+Verde: 50
+Azul: 51
+----------------------
+Rojo: 105
+Verde: 50
+Azul: 47
+----------------------
+Rojo: 123
+Verde: 74
+Azul: 77
+----------------------
+Rojo: 141
+Verde: 92
+Azul: 90
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 242
+Verde: 171
+Azul: 708
+----------------------
+Rojo: 727
+Verde: 649
+Azul: 645
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 479
+Verde: 53
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 106
+Verde: 27
+Azul: 16
+----------------------
+Rojo: 23
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 23
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 26
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 19
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 22
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 32
+Verde: 0
+Azul: 9
+----------------------
+Rojo: 111
+Verde: 61
+Azul: 64
+----------------------
+Rojo: 208
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4090
+Azul: 4014
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 203
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 68
+Verde: 10
+Azul: 6
+----------------------
+Rojo: 61
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 55
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 58
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 51
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+����������������������������������������������������������������ojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4051
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4045
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 1170
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4051
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4049
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 458
+----------------------
+Rojo: 4026
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 433
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4063
+----------------------
+Rojo: 4088
+Verde: 4095
+Azul: 4093
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 86
+----------------------
+Rojo: 4058
+Verde: 4048
+Azul: 4041
+----------------------
+Rojo: 4079
+Verde: 4050
+Azul: 3955
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4079
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 741
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 1010
+----------------------
+Rojo: 4048
+Verde: 4078
+Azul: 4016
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4051
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3833
+Verde: 1203
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 461
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 480
+Verde: 1200
+Azul: 4063
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3990
+Verde: 4003
+Azul: 4007
+----------------------
+Rojo: 4017
+Verde: 3987
+Azul: 3995
+----------------------
+Rojo: 3984
+Verde: 4011
+Azul: 4000
+----------------------
+Rojo: 3993
+Verde: 4006
+Azul: 4018
+----------------------
+Rojo: 3987
+Verde: 4011
+Azul: 3999
+----------------------
+Rojo: 4016
+Verde: 3995
+Azul: 3991
+----------------------
+Rojo: 4012
+Verde: 3999
+Azul: 4001
+----------------------
+Rojo: 4016
+Verde: 4005
+Azul: 38
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 80
+----------------------
+Rojo: 1329
+Verde: 1277
+Azul: 1277
+----------------------
+Rojo: 1313
+Verde: 1271
+Azul: 1282
+----------------------
+Rojo: 378
+Verde: 318
+Azul: 327
+----------------------
+Rojo: 52
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 549
+Verde: 493
+Azul: 496
+----------------------
+Rojo: 576
+Verde: 531
+Azul: 494
+----------------------
+Rojo: 529
+Verde: 494
+Azul: 543
+----------------------
+Rojo: 656
+Verde: 613
+Azul: 604
+----------------------
+Rojo: 646
+Verde: 606
+Azul: 610
+----------------------
+Rojo: 656
+Verde: 609
+Azul: 612
+----------------------
+Rojo: 647
+Verde: 613
+Azul: 608
+----------------------
+Rojo: 669
+Verde: 610
+Azul: 613
+----------------------
+Rojo: 662
+Verde: 615
+Azul: 620
+----------------------
+Rojo: 673
+Verde: 622
+Azul: 615
+----------------------
+Rojo: 51
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 23
+Verde: 16
+Azul: 16
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 446
+Verde: 494
+Azul: 545
+----------------------
+Rojo: 454
+Verde: 356
+Azul: 144
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 256
+Verde: 175
+Azul: 180
+----------------------
+Rojo: 170
+Verde: 0
+Azul: 722
+----------------------
+Rojo: 763
+Verde: 713
+Azul: 717
+----------------------
+Rojo: 752
+Verde: 717
+Azul: 710
+----------------------
+Rojo: 752
+Verde: 707
+Azul: 712
+----------------------
+Rojo: 747
+Verde: 714
+Azul: 706
+----------------------
+Rojo: 757
+Verde: 711
+Azul: 720
+----------------------
+Rojo: 13
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 10
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 17
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 30
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 33
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 31
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 38
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 41
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 827
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 767
+Verde: 714
+Azul: 714
+----------------------
+Rojo: 759
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 753
+Verde: 710
+Azul: 715
+----------------------
+Rojo: 765
+Verde: 714
+Azul: 714
+----------------------
+Rojo: 759
+Verde: 710
+Azul: 719
+----------------------
+Rojo: 767
+Verde: 714
+Azul: 717
+----------------------
+Rojo: 759
+Verde: 715
+Azul: 716
+----------------------
+Rojo: 763
+Verde: 718
+Azul: 714
+----------------------
+Rojo: 759
+Verde: 717
+Azul: 715
+----------------------
+Rojo: 762
+Verde: 715
+Azul: 716
+----------------------
+Rojo: 759
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 759
+Verde: 719
+Azul: 719
+----------------------
+Rojo: 768
+Verde: 718
+Azul: 720
+----------------------
+Rojo: 757
+Verde: 720
+Azul: 714
+----------------------
+Rojo: 770
+Verde: 717
+Azul: 723
+----------------------
+Rojo: 765
+Verde: 715
+Azul: 715
+----------------------
+Rojo: 767
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 767
+Verde: 720
+Azul: 722
+----------------------
+Rojo: 762
+Verde: 723
+Azul: 719
+----------------------
+Rojo: 754
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 766
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 721
+Azul: 720
+----------------------
+Rojo: 765
+Verde: 717
+Azul: 715
+----------------------
+Rojo: 762
+Verde: 715
+Azul: 719
+----------------------
+Rojo: 762
+Verde: 719
+Azul: 719
+----------------------
+Rojo: 757
+Verde: 720
+Azul: 717
+----------------------
+Rojo: 769
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 770
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 768
+Verde: 718
+Azul: 720
+----------------------
+Rojo: 755
+Verde: 719
+Azul: 716
+----------------------
+Rojo: 768
+Verde: 723
+Azul: 720
+----------------------
+Rojo: 801
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 764
+Verde: 720
+Azul: 714
+----------------------
+Rojo: 764
+Verde: 721
+Azul: 715
+----------------------
+Rojo: 758
+Verde: 716
+Azul: 719
+----------------------
+Rojo: 752
+Verde: 719
+Azul: 717
+----------------------
+Rojo: 765
+Verde: 716
+Azul: 721
+----------------------
+Rojo: 765
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 762
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 756
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 765
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 764
+Verde: 715
+Azul: 717
+----------------------
+Rojo: 755
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 721
+Azul: 717
+----------------------
+Rojo: 757
+Verde: 718
+Azul: 720
+----------------------
+Rojo: 759
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 764
+Verde: 716
+Azul: 715
+----------------------
+Rojo: 758
+Verde: 714
+Azul: 720
+----------------------
+Rojo: 774
+Verde: 719
+Azul: 719
+----------------------
+Rojo: 758
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 761
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 763
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 766
+Verde: 721
+Azul: 723
+----------------------
+Rojo: 767
+Verde: 719
+Azul: 723
+----------------------
+Rojo: 762
+Verde: 719
+Azul: 715
+----------------------
+Rojo: 762
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 771
+Verde: 719
+Azul: 715
+----------------------
+Rojo: 757
+Verde: 714
+Azul: 720
+----------------------
+Rojo: 761
+Verde: 717
+Azul: 725
+----------------------
+Rojo: 763
+Verde: 710
+Azul: 725
+----------------------
+Rojo: 759
+Verde: 723
+Azul: 720
+----------------------
+Rojo: 762
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 768
+Verde: 723
+Azul: 724
+----------------------
+Rojo: 765
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 714
+Azul: 720
+----------------------
+Rojo: 755
+Verde: 720
+Azul: 723
+----------------------
+Rojo: 771
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 759
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 763
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 765
+Verde: 719
+Azul: 722
+----------------------
+Rojo: 768
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 766
+Verde: 721
+Azul: 724
+----------------------
+Rojo: 769
+Verde: 752
+Azul: 723
+----------------------
+Rojo: 766
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 766
+Verde: 715
+Azul: 663
+----------------------
+Rojo: 758
+Verde: 723
+Azul: 721
+----------------------
+Rojo: 770
+Verde: 715
+Azul: 718
+----------------------
+Rojo: 758
+Verde: 719
+Azul: 719
+----------------------
+Rojo: 60
+Verde: 9
+Azul: 5
+----------------------
+Rojo: 24
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 13
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 13
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 9
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 83
+Verde: 15
+Azul: 48
+----------------------
+Rojo: 770
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 722
+Azul: 718
+----------------------
+Rojo: 768
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 763
+Verde: 717
+Azul: 724
+----------------------
+Rojo: 771
+Verde: 719
+Azul: 718
+----------------------
+Rojo: 765
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 765
+Verde: 719
+Azul: 752
+----------------------
+Rojo: 761
+Verde: 720
+Azul: 716
+----------------------
+Rojo: 769
+Verde: 717
+Azul: 717
+----------------------
+Rojo: 763
+Verde: 720
+Azul: 722
+----------------------
+Rojo: 768
+Verde: 714
+Azul: 725
+----------------------
+Rojo: 773
+Verde: 721
+Azul: 718
+----------------------
+Rojo: 784
+Verde: 720
+Azul: 717
+----------------------
+Rojo: 769
+Verde: 717
+Azul: 721
+----------------------
+Rojo: 763
+Verde: 685
+Azul: 724
+----------------------
+Rojo: 758
+Verde: 720
+Azul: 722
+----------------------
+Rojo: 767
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 753
+Verde: 718
+Azul: 727
+----------------------
+Rojo: 767
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 772
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 775
+Verde: 720
+Azul: 724
+----------------------
+Rojo: 757
+Verde: 723
+Azul: 725
+----------------------
+Rojo: 768
+Verde: 722
+Azul: 721
+----------------------
+Rojo: 789
+Verde: 831
+Azul: 40
+----------------------
+Rojo: 82
+Verde: 27
+Azul: 16
+----------------------
+Rojo: 67
+Verde: 16
+Azul: 16
+----------------------
+Rojo: 64
+Verde: 16
+Azul: 16
+----------------------
+Rojo: 64
+Verde: 9
+Azul: 7
+----------------------
+Rojo: 64
+Verde: 8
+Azul: 13
+----------------------
+Rojo: 58
+Verde: 9
+Azul: 15
+----------------------
+Rojo: 57
+Verde: 9
+Azul: 9
+----------------------
+Rojo: 57
+Verde: 11
+Azul: 14
+----------------------
+Rojo: 64
+Verde: 9
+Azul: 13
+----------------------
+Rojo: 49
+Verde: 15
+Azul: 4
+----------------------
+Rojo: 68
+Verde: 2
+Azul: 11
+----------------------
+Rojo: 28
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 45
+Verde: 10
+Azul: 3
+----------------------
+Rojo: 74
+Verde: 10
+Azul: 17
+----------------------
+Rojo: 54
+Verde: 11
+Azul: 7
+----------------------
+Rojo: 59
+Verde: 16
+Azul: 13
+----------------------
+Rojo: 53
+Verde: 10
+Azul: 14
+----------------------
+Rojo: 59
+Verde: 13
+Azul: 16
+----------------------
+Rojo: 64
+Verde: 13
+Azul: 16
+----------------------
+Rojo: 61
+Verde: 8
+Azul: 12
+----------------------
+Rojo: 65
+Verde: 13
+Azul: 10
+----------------------
+Rojo: 57
+Verde: 6
+Azul: 13
+----------------------
+Rojo: 55
+Verde: 14
+Azul: 11
+----------------------
+Rojo: 63
+Verde: 6
+Azul: 13
+----------------------
+Rojo: 63
+Verde: 11
+Azul: 14
+----------------------
+Rojo: 56
+Verde: 13
+Azul: 10
+----------------------
+Rojo: 63
+Verde: 11
+Azul: 12
+----------------------
+Rojo: 64
+Verde: 11
+Azul: 13
+----------------------
+Rojo: 63
+Verde: 12
+Azul: 9
+----------------------
+Rojo: 59
+Verde: 6
+Azul: 11
+----------------------
+Rojo: 64
+Verde: 7
+Azul: 22
+----------------------
+Rojo: 67
+Verde: 11
+Azul: 17
+----------------------
+Rojo: 68
+Verde: 17
+Azul: 19
+----------------------
+Rojo: 768
+Verde: 720
+Azul: 725
+----------------------
+Rojo: 767
+Verde: 714
+Azul: 720
+----------------------
+Rojo: 766
+Verde: 710
+Azul: 720
+----------------------
+Rojo: 757
+Verde: 718
+Azul: 719
+----------------------
+Rojo: 141
+Verde: 79
+Azul: 73
+----------------------
+Rojo: 77
+Verde: 16
+Azul: 16
+----------------------
+Rojo: 71
+Verde: 10
+Azul: 20
+----------------------
+Rojo: 72
+Verde: 16
+Azul: 16
+----------------------
+Rojo: 51
+Verde: 51
+Azul: 17
+----------------------
+Rojo: 71
+Verde: 17
+Azul: 22
+----------------------
+Rojo: 65
+Verde: 16
+Azul: 21
+----------------------
+Rojo: 763
+Verde: 713
+Azul: 715
+----------------------
+Rojo: 773
+Verde: 711
+Azul: 719
+----------------------
+Rojo: 767
+Verde: 709
+Azul: 714
+----------------------
+Rojo: 767
+Verde: 718
+Azul: 717
+----------------------
+Rojo: 758
+Verde: 707
+Azul: 720
+----------------------
+Rojo: 755
+Verde: 713
+Azul: 718
+----------------------
+Rojo: 770
+Verde: 710
+Azul: 713
+----------------------
+Rojo: 758
+Verde: 715
+Azul: 713
+----------------------
+Rojo: 754
+Verde: 713
+Azul: 714
+----------------------
+Rojo: 754
+Verde: 720
+Azul: 711
+----------------------
+Rojo: 774
+Verde: 720
+Azul: 721
+----------------------
+Rojo: 767
+Verde: 720
+Azul: 714
+----------------------
+Rojo: 767
+Verde: 713
+Azul: 716
+----------------------
+Rojo: 761
+Verde: 711
+Azul: 719
+----------------------
+Rojo: 769
+Verde: 720
+Azul: 707
+----------------------
+Rojo: 770
+Verde: 720
+Azul: 717
+----------------------
+Rojo: 757
+Verde: 714
+Azul: 717
+----------------------
+Rojo: 759
+Verde: 720
+Azul: 713
+----------------------
+Rojo: 765
+Verde: 721
+Azul: 720
+----------------------
+Rojo: 761
+Verde: 720
+Azul: 719
+----------------------
+Rojo: 769
+Verde: 709
+Azul: 717
+----------------------
+Rojo: 754
+Verde: 716
+Azul: 711
+----------------------
+Rojo: 769
+Verde: 719
+Azul: 719
+----------------------
+Rojo: 764
+Verde: 719
+Azul: 716
+----------------------
+Rojo: 759
+Verde: 710
+Azul: 710
+----------------------
+Rojo: 768
+Verde: 707
+Azul: 713
+----------------------
+Rojo: 755
+Verde: 717
+Azul: 719
+----------------------
+Rojo: 757
+Verde: 711
+Azul: 711
+----------------------
+Rojo: 771
+Verde: 718
+Azul: 708
+----------------------
+Rojo: 764
+Verde: 714
+Azul: 718
+----------------------
+Rojo: 762
+Verde: 720
+Azul: 717
+----------------------
+Rojo: 771
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 759
+Verde: 717
+Azul: 711
+----------------------
+Rojo: 761
+Verde: 715
+Azul: 714
+----------------------
+Rojo: 766
+Verde: 710
+Azul: 720
+----------------------
+Rojo: 767
+Verde: 710
+Azul: 715
+----------------------
+Rojo: 767
+Verde: 710
+Azul: 718
+----------------------
+Rojo: 769
+Verde: 710
+Azul: 710
+----------------------
+Rojo: 763
+Verde: 718
+Azul: 720
+----------------------
+Rojo: 774
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 764
+Verde: 713
+Azul: 716
+----------------------
+Rojo: 757
+Verde: 719
+Azul: 708
+----------------------
+Rojo: 761
+Verde: 718
+Azul: 717
+----------------------
+Rojo: 759
+Verde: 715
+Azul: 718
+----------------------
+Rojo: 767
+Verde: 718
+Azul: 717
+----------------------
+Rojo: 770
+Verde: 711
+Azul: 717
+----------------------
+Rojo: 765
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 769
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 767
+Verde: 719
+Azul: 710
+----------------------
+Rojo: 769
+Verde: 715
+Azul: 714
+----------------------
+Rojo: 753
+Verde: 716
+Azul: 718
+----------------------
+Rojo: 755
+Verde: 714
+Azul: 715
+----------------------
+Rojo: 766
+Verde: 718
+Azul: 711
+----------------------
+Rojo: 767
+Verde: 717
+Azul: 715
+----------------------
+Rojo: 758
+Verde: 720
+Azul: 711
+----------------------
+Rojo: 765
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 763
+Verde: 718
+Azul: 711
+----------------------
+Rojo: 773
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 759
+Verde: 715
+Azul: 709
+----------------------
+Rojo: 759
+Verde: 715
+Azul: 711
+----------------------
+Rojo: 757
+Verde: 720
+Azul: 720
+----------------------
+Rojo: 763
+Verde: 715
+Azul: 714
+----------------------
+Rojo: 764
+Verde: 709
+Azul: 720
+----------------------
+Rojo: 762
+Verde: 716
+Azul: 720
+----------------------
+Rojo: 770
+Verde: 718
+Azul: 719
+----------------------
+Rojo: 758
+Verde: 711
+Azul: 711
+----------------------
+Rojo: 769
+Verde: 719
+Azul: 720
+----------------------
+Rojo: 757
+Verde: 718
+Azul: 720
+----------------------
+Rojo: 765
+Verde: 709
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 716
+Azul: 710
+----------------------
+Rojo: 761
+Verde: 708
+Azul: 713
+----------------------
+Rojo: 769
+Verde: 713
+Azul: 713
+----------------------
+Rojo: 761
+Verde: 717
+Azul: 717
+----------------------
+Rojo: 769
+Verde: 718
+Azul: 711
+----------------------
+Rojo: 762
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 758
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 768
+Verde: 715
+Azul: 720
+----------------------
+Rojo: 766
+Verde: 720
+Azul: 715
+----------------------
+Rojo: 763
+Verde: 711
+Azul: 718
+----------------------
+Rojo: 765
+Verde: 717
+Azul: 720
+----------------------
+Rojo: 759
+Verde: 713
+Azul: 719
+----------------------
+Rojo: 770
+Verde: 719
+Azul: 714
+----------------------
+Rojo: 768
+Verde: 715
+Azul: 721
+----------------------
+Rojo: 762
+Verde: 710
+Azul: 718
+----------------------
+Rojo: 759
+Verde: 715
+Azul: 674
+----------------------
+Rojo: 767
+Verde: 709
+Azul: 714
+----------------------
+Rojo: 754
+Verde: 713
+Azul: 711
+----------------------
+Rojo: 794
+Verde: 752
+Azul: 749
+----------------------
+Rojo: 815
+Verde: 767
+Azul: 752
+----------------------
+Rojo: 797
+Verde: 749
+Azul: 750
+----------------------
+Rojo: 787
+Verde: 743
+Azul: 746
+----------------------
+Rojo: 797
+Verde: 752
+Azul: 747
+----------------------
+Rojo: 797
+Verde: 751
+Azul: 752
+----------------------
+Rojo: 782
+Verde: 741
+Azul: 743
+----------------------
+Rojo: 795
+Verde: 735
+Azul: 738
+----------------------
+Rojo: 785
+Verde: 737
+Azul: 741
+----------------------
+Rojo: 791
+Verde: 737
+Azul: 737
+----------------------
+Rojo: 793
+Verde: 735
+Azul: 729
+----------------------
+Rojo: 789
+Verde: 735
+Azul: 738
+----------------------
+Rojo: 783
+Verde: 740
+Azul: 740
+----------------------
+Rojo: 782
+Verde: 739
+Azul: 742
+----------------------
+Rojo: 789
+Verde: 736
+Azul: 742
+----------------------
+Rojo: 790
+Verde: 735
+Azul: 735
+----------------------
+Rojo: 789
+Verde: 737
+Azul: 741
+----------------------
+Rojo: 784
+Verde: 739
+Azul: 745
+----------------------
+Rojo: 785
+Verde: 739
+Azul: 734
+----------------------
+Rojo: 785
+Verde: 726
+Azul: 741
+----------------------
+Rojo: 787
+Verde: 741
+Azul: 739
+----------------------
+Rojo: 785
+Verde: 748
+Azul: 733
+----------------------
+Rojo: 797
+Verde: 736
+Azul: 737
+----------------------
+Rojo: 790
+Verde: 737
+Azul: 739
+----------------------
+Rojo: 789
+Verde: 736
+Azul: 734
+----------------------
+Rojo: 789
+Verde: 735
+Azul: 738
+----------------------
+Rojo: 794
+Verde: 750
+Azul: 745
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 70
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 797
+Verde: 745
+Azul: 747
+----------------------
+Rojo: 798
+Verde: 747
+Azul: 778
+----------------------
+Rojo: 806
+Verde: 754
+Azul: 765
+----------------------
+Rojo: 843
+Verde: 799
+Azul: 801
+----------------------
+Rojo: 853
+Verde: 815
+Azul: 817
+----------------------
+Rojo: 847
+Verde: 789
+Azul: 790
+----------------------
+Rojo: 831
+Verde: 783
+Azul: 780
+----------------------
+Rojo: 807
+Verde: 742
+Azul: 725
+----------------------
+Rojo: 779
+Verde: 719
+Azul: 710
+----------------------
+Rojo: 806
+Verde: 790
+Azul: 767
+----------------------
+Rojo: 811
+Verde: 793
+Azul: 765
+----------------------
+Rojo: 794
+Verde: 769
+Azul: 747
+----------------------
+Rojo: 783
+Verde: 759
+Azul: 741
+----------------------
+Rojo: 781
+Verde: 752
+Azul: 732
+----------------------
+Rojo: 775
+Verde: 754
+Azul: 733
+----------------------
+Rojo: 784
+Verde: 759
+Azul: 736
+----------------------
+Rojo: 778
+Verde: 759
+Azul: 734
+----------------------
+Rojo: 791
+Verde: 766
+Azul: 743
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 687
+Verde: 623
+Azul: 535
+----------------------
+Rojo: 762
+Verde: 747
+Azul: 720
+----------------------
+Rojo: 745
+Verde: 782
+Azul: 752
+----------------------
+Rojo: 803
+Verde: 776
+Azul: 753
+----------------------
+Rojo: 759
+Verde: 788
+Azul: 785
+----------------------
+Rojo: 788
+Verde: 822
+Azul: 784
+----------------------
+Rojo: 322
+Verde: 300
+Azul: 381
+----------------------
+Rojo: 342
+Verde: 370
+Azul: 271
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 784
+Verde: 851
+Azul: 832
+----------------------
+Rojo: 799
+Verde: 885
+Azul: 817
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 1
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 833
+Verde: 869
+Azul: 787
+----------------------
+Rojo: 750
+Verde: 778
+Azul: 752
+----------------------
+Rojo: 752
+Verde: 767
+Azul: 749
+----------------------
+Rojo: 747
+Verde: 771
+Azul: 753
+----------------------
+Rojo: 747
+Verde: 771
+Azul: 752
+----------------------
+Rojo: 747
+Verde: 769
+Azul: 751
+----------------------
+Rojo: 755
+Verde: 816
+Azul: 818
+----------------------
+Rojo: 508
+Verde: 460
+Azul: 192
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 745
+Verde: 759
+Azul: 747
+----------------------
+Rojo: 743
+Verde: 774
+Azul: 750
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 751
+Verde: 763
+Azul: 731
+----------------------
+Rojo: 809
+Verde: 834
+Azul: 800
+----------------------
+Rojo: 732
+Verde: 735
+Azul: 707
+----------------------
+Rojo: 729
+Verde: 735
+Azul: 707
+----------------------
+Rojo: 739
+Verde: 734
+Azul: 704
+----------------------
+Rojo: 735
+Verde: 736
+Azul: 715
+----------------------
+Rojo: 733
+Verde: 733
+Azul: 704
+----------------------
+Rojo: 734
+Verde: 732
+Azul: 719
+----------------------
+Rojo: 740
+Verde: 752
+Azul: 723
+----------------------
+Rojo: 0
+Verde: 351
+Azul: 574
+----------------------
+Rojo: 630
+Verde: 641
+Azul: 621
+----------------------
+Rojo: 497
+Verde: 539
+Azul: 240
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 726
+Verde: 766
+Azul: 709
+----------------------
+Rojo: 731
+Verde: 735
+Azul: 704
+----------------------
+Rojo: 723
+Verde: 735
+Azul: 697
+----------------------
+Rojo: 725
+Verde: 727
+Azul: 705
+----------------------
+Rojo: 723
+Verde: 737
+Azul: 706
+----------------------
+Rojo: 735
+Verde: 735
+Azul: 708
+----------------------
+Rojo: 727
+Verde: 737
+Azul: 707
+----------------------
+Rojo: 727
+Verde: 731
+Azul: 709
+----------------------
+Rojo: 729
+Verde: 737
+Azul: 707
+----------------------
+Rojo: 736
+Verde: 731
+Azul: 708
+----------------------
+Rojo: 729
+Verde: 737
+Azul: 709
+----------------------
+Rojo: 733
+Verde: 743
+Azul: 717
+----------------------
+Rojo: 733
+Verde: 742
+Azul: 709
+----------------------
+Rojo: 730
+Verde: 725
+Azul: 675
+----------------------
+Rojo: 734
+Verde: 734
+Azul: 705
+----------------------
+Rojo: 736
+Verde: 747
+Azul: 719
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 485
+Verde: 491
+Azul: 461
+----------------------
+Rojo: 37
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 739
+Verde: 749
+Azul: 720
+----------------------
+Rojo: 731
+Verde: 740
+Azul: 714
+----------------------
+Rojo: 735
+Verde: 743
+Azul: 719
+----------------------
+Rojo: 732
+Verde: 750
+Azul: 720
+----------------------
+Rojo: 737
+Verde: 748
+Azul: 718
+----------------------
+Rojo: 741
+Verde: 747
+Azul: 716
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 8
+Azul: 177
+----------------------
+Rojo: 466
+Verde: 469
+Azul: 427
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 742
+----------------------
+Rojo: 731
+Verde: 741
+Azul: 727
+----------------------
+Rojo: 730
+Verde: 743
+Azul: 727
+----------------------
+Rojo: 726
+Verde: 737
+Azul: 725
+----------------------
+Rojo: 736
+Verde: 733
+Azul: 720
+----------------------
+Rojo: 741
+Verde: 752
+Azul: 723
+----------------------
+Rojo: 16
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 718
+Verde: 722
+Azul: 707
+----------------------
+Rojo: 714
+Verde: 719
+Azul: 701
+----------------------
+Rojo: 714
+Verde: 720
+Azul: 705
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 720
+Verde: 723
+Azul: 706
+----------------------
+Rojo: 742
+Verde: 750
+Azul: 723
+----------------------
+Rojo: 272
+Verde: 456
+Azul: 554
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 272
+Verde: 301
+Azul: 230
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 727
+Verde: 728
+Azul: 721
+----------------------
+Rojo: 801
+Verde: 798
+Azul: 786
+----------------------
+Rojo: 707
+Verde: 717
+Azul: 695
+----------------------
+Rojo: 716
+Verde: 722
+Azul: 699
+----------------------
+Rojo: 709
+Verde: 714
+Azul: 703
+----------------------
+Rojo: 715
+Verde: 720
+Azul: 698
+----------------------
+Rojo: 707
+Verde: 720
+Azul: 701
+----------------------
+Rojo: 706
+Verde: 719
+Azul: 705
+----------------------
+Rojo: 713
+Verde: 720
+Azul: 704
+----------------------
+Rojo: 709
+Verde: 717
+Azul: 702
+----------------------
+Rojo: 715
+Verde: 717
+Azul: 709
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 645
+----------------------
+Rojo: 721
+Verde: 724
+Azul: 711
+----------------------
+Rojo: 721
+Verde: 713
+Azul: 702
+----------------------
+Rojo: 720
+Verde: 721
+Azul: 707
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 720
+Verde: 720
+Azul: 711
+----------------------
+Rojo: 716
+Verde: 713
+Azul: 709
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 721
+Verde: 720
+Azul: 709
+----------------------
+Rojo: 720
+Verde: 725
+Azul: 711
+----------------------
+Rojo: 794
+Verde: 801
+Azul: 793
+----------------------
+Rojo: 771
+Verde: 761
+Azul: 747
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 724
+Verde: 689
+Azul: 615
+----------------------
+Rojo: 382
+Verde: 413
+Azul: 432
+----------------------
+Rojo: 577
+Verde: 558
+Azul: 545
+----------------------
+Rojo: 624
+Verde: 626
+Azul: 618
+----------------------
+Rojo: 659
+Verde: 671
+Azul: 667
+----------------------
+Rojo: 710
+Verde: 713
+Azul: 707
+----------------------
+Rojo: 718
+Verde: 720
+Azul: 705
+----------------------
+Rojo: 711
+Verde: 716
+Azul: 711
+----------------------
+Rojo: 717
+Verde: 720
+Azul: 706
+----------------------
+Rojo: 720
+Verde: 711
+Azul: 701
+----------------------
+Rojo: 718
+Verde: 715
+Azul: 707
+----------------------
+Rojo: 706
+Verde: 715
+Azul: 701
+----------------------
+Rojo: 720
+Verde: 775
+Azul: 161
+----------------------
+Rojo: 27
+Verde: 51
+Azul: 35
+----------------------
+Rojo: 35
+Verde: 55
+Azul: 25
+----------------------
+Rojo: 41
+Verde: 43
+Azul: 23
+----------------------
+Rojo: 28
+Verde: 48
+Azul: 32
+----------------------
+Rojo: 31
+Verde: 41
+Azul: 32
+----------------------
+Rojo: 29
+Verde: 48
+Azul: 42
+----------------------
+Rojo: 32
+Verde: 37
+Azul: 22
+----------------------
+Rojo: 43
+Verde: 49
+Azul: 30
+----------------------
+Rojo: 38
+Verde: 47
+Azul: 26
+----------------------
+Rojo: 29
+Verde: 35
+Azul: 27
+----------------------
+Rojo: 32
+Verde: 49
+Azul: 25
+----------------------
+Rojo: 23
+Verde: 48
+Azul: 26
+----------------------
+Rojo: 43
+Verde: 53
+Azul: 26
+----------------------
+Rojo: 36
+Verde: 46
+Azul: 25
+----------------------
+Rojo: 35
+Verde: 46
+Azul: 31
+----------------------
+Rojo: 31
+Verde: 48
+Azul: 32
+----------------------
+Rojo: 32
+Verde: 49
+Azul: 25
+----------------------
+Rojo: 26
+Verde: 48
+Azul: 27
+----------------------
+Rojo: 27
+Verde: 45
+Azul: 19
+----------------------
+Rojo: 371
+Verde: 799
+Azul: 714
+----------------------
+Rojo: 715
+Verde: 711
+Azul: 701
+----------------------
+Rojo: 708
+Verde: 707
+Azul: 703
+----------------------
+Rojo: 711
+Verde: 717
+Azul: 700
+----------------------
+Rojo: 714
+Verde: 714
+Azul: 699
+----------------------
+Rojo: 717
+Verde: 715
+Azul: 703
+----------------------
+Rojo: 717
+Verde: 709
+Azul: 705
+----------------------
+Rojo: 706
+Verde: 704
+Azul: 703
+----------------------
+Rojo: 718
+Verde: 701
+Azul: 704
+----------------------
+Rojo: 715
+Verde: 704
+Azul: 709
+----------------------
+Rojo: 714
+Verde: 710
+Azul: 706
+----------------------
+Rojo: 713
+Verde: 707
+Azul: 695
+----------------------
+Rojo: 715
+Verde: 709
+Azul: 699
+----------------------
+Rojo: 708
+Verde: 707
+Azul: 698
+----------------------
+Rojo: 709
+Verde: 705
+Azul: 704
+----------------------
+Rojo: 706
+Verde: 717
+Azul: 694
+----------------------
+Rojo: 717
+Verde: 711
+Azul: 702
+----------------------
+Rojo: 706
+Verde: 705
+Azul: 703
+----------------------
+Rojo: 709
+Verde: 708
+Azul: 704
+----------------------
+Rojo: 709
+Verde: 714
+Azul: 697
+----------------------
+Rojo: 711
+Verde: 713
+Azul: 698
+----------------------
+Rojo: 716
+Verde: 713
+Azul: 704
+----------------------
+Rojo: 709
+Verde: 720
+Azul: 705
+----------------------
+Rojo: 714
+Verde: 714
+Azul: 702
+----------------------
+Rojo: 711
+Verde: 710
+Azul: 699
+----------------------
+Rojo: 706
+Verde: 714
+Azul: 705
+----------------------
+Rojo: 713
+Verde: 705
+Azul: 700
+----------------------
+Rojo: 708
+Verde: 711
+Azul: 699
+----------------------
+Rojo: 713
+Verde: 709
+Azul: 698
+----------------------
+Rojo: 714
+Verde: 706
+Azul: 706
+----------------------
+Rojo: 713
+Verde: 710
+Azul: 700
+----------------------
+Rojo: 716
+Verde: 709
+Azul: 704
+----------------------
+Rojo: 715
+Verde: 708
+Azul: 701
+----------------------
+Rojo: 705
+Verde: 714
+Azul: 705
+----------------------
+Rojo: 706
+Verde: 713
+Azul: 702
+----------------------
+Rojo: 710
+Verde: 707
+Azul: 697
+----------------------
+Rojo: 707
+Verde: 705
+Azul: 699
+----------------------
+Rojo: 706
+Verde: 707
+Azul: 697
+----------------------
+Rojo: 705
+Verde: 714
+Azul: 703
+----------------------
+Rojo: 710
+Verde: 706
+Azul: 704
+----------------------
+Rojo: 710
+Verde: 710
+Azul: 691
+----------------------
+Rojo: 707
+Verde: 710
+Azul: 698
+----------------------
+Rojo: 707
+Verde: 715
+Azul: 707
+----------------------
+Rojo: 708
+Verde: 709
+Azul: 702
+----------------------
+Rojo: 703
+Verde: 708
+Azul: 697
+----------------------
+Rojo: 707
+Verde: 710
+Azul: 700
+----------------------
+Rojo: 709
+Verde: 720
+Azul: 705
+----------------------
+Rojo: 702
+Verde: 713
+Azul: 704
+----------------------
+Rojo: 711
+Verde: 713
+Azul: 697
+----------------------
+Rojo: 710
+Verde: 707
+Azul: 702
+----------------------
+Rojo: 715
+Verde: 705
+Azul: 698
+----------------------
+Rojo: 713
+Verde: 711
+Azul: 701
+----------------------
+Rojo: 718
+Verde: 715
+Azul: 698
+----------------------
+Rojo: 706
+Verde: 709
+Azul: 704
+----------------------
+Rojo: 704
+Verde: 705
+Azul: 695
+----------------------
+Rojo: 709
+Verde: 711
+Azul: 697
+----------------------
+Rojo: 711
+Verde: 707
+Azul: 705
+----------------------
+Rojo: 710
+Verde: 710
+Azul: 699
+----------------------
+Rojo: 714
+Verde: 705
+Azul: 697
+----------------------
+Rojo: 708
+Verde: 707
+Azul: 697
+----------------------
+Rojo: 710
+Verde: 713
+Azul: 706
+----------------------
+Rojo: 706
+Verde: 710
+Azul: 705
+----------------------
+Rojo: 709
+Verde: 707
+Azul: 698
+----------------------
+Rojo: 710
+Verde: 711
+Azul: 698
+----------------------
+Rojo: 706
+Verde: 717
+Azul: 704
+----------------------
+Rojo: 712
+Verde: 710
+Azul: 698
+----------------------
+Rojo: 715
+Verde: 715
+Azul: 698
+----------------------
+Rojo: 715
+Verde: 711
+Azul: 694
+----------------------
+Rojo: 711
+Verde: 711
+Azul: 707
+----------------------
+Rojo: 699
+Verde: 711
+Azul: 702
+----------------------
+Rojo: 717
+Verde: 709
+Azul: 703
+----------------------
+Rojo: 705
+Verde: 706
+Azul: 723
+----------------------
+Rojo: 715
+Verde: 714
+Azul: 704
+----------------------
+Rojo: 718
+Verde: 720
+Azul: 697
+----------------------
+Rojo: 714
+Verde: 715
+Azul: 699
+----------------------
+Rojo: 716
+Verde: 711
+Azul: 702
+----------------------
+Rojo: 58
+Verde: 67
+Azul: 48
+----------------------
+Rojo: 26
+Verde: 41
+Azul: 18
+----------------------
+Rojo: 15
+Verde: 29
+Azul: 16
+----------------------
+Rojo: 21
+Verde: 29
+Azul: 18
+----------------------
+Rojo: 18
+Verde: 35
+Azul: 23
+----------------------
+Rojo: 16
+Verde: 30
+Azul: 14
+----------------------
+Rojo: 18
+Verde: 33
+Azul: 16
+----------------------
+Rojo: 13
+Verde: 34
+Azul: 23
+----------------------
+Rojo: 16
+Verde: 33
+Azul: 17
+----------------------
+Rojo: 20
+Verde: 34
+Azul: 21
+----------------------
+Rojo: 15
+Verde: 34
+Azul: 17
+----------------------
+Rojo: 18
+Verde: 11
+Azul: 21
+----------------------
+Rojo: 713
+Verde: 711
+Azul: 706
+----------------------
+Rojo: 703
+Verde: 709
+Azul: 695
+----------------------
+Rojo: 713
+Verde: 705
+Azul: 696
+----------------------
+Rojo: 715
+Verde: 708
+Azul: 694
+----------------------
+Rojo: 706
+Verde: 711
+Azul: 704
+----------------------
+Rojo: 711
+Verde: 709
+Azul: 703
+----------------------
+Rojo: 710
+Verde: 706
+Azul: 701
+----------------------
+Rojo: 714
+Verde: 716
+Azul: 694
+----------------------
+Rojo: 709
+Verde: 707
+Azul: 697
+----------------------
+Rojo: 704
+Verde: 711
+Azul: 709
+----------------------
+Rojo: 713
+Verde: 715
+Azul: 697
+----------------------
+Rojo: 704
+Verde: 707
+Azul: 704
+----------------------
+Rojo: 709
+Verde: 707
+Azul: 704
+----------------------
+Rojo: 705
+Verde: 710
+Azul: 697
+----------------------
+Rojo: 704
+Verde: 711
+Azul: 704
+----------------------
+Rojo: 711
+Verde: 711
+Azul: 705
+----------------------
+Rojo: 707
+Verde: 715
+Azul: 698
+----------------------
+Rojo: 706
+Verde: 704
+Azul: 699
+----------------------
+Rojo: 705
+Verde: 704
+Azul: 697
+----------------------
+Rojo: 709
+Verde: 711
+Azul: 704
+----------------------
+Rojo: 706
+Verde: 710
+Azul: 695
+----------------------
+Rojo: 709
+Verde: 710
+Azul: 704
+----------------------
+Rojo: 704
+Verde: 708
+Azul: 702
+----------------------
+Rojo: 710
+Verde: 711
+Azul: 701
+----------------------
+Rojo: 706
+Verde: 705
+Azul: 693
+----------------------
+Rojo: 702
+Verde: 711
+Azul: 698
+----------------------
+Rojo: 707
+Verde: 715
+Azul: 703
+----------------------
+Rojo: 706
+Verde: 707
+Azul: 699
+----------------------
+Rojo: 709
+Verde: 710
+Azul: 701
+----------------------
+Rojo: 704
+Verde: 713
+Azul: 693
+----------------------
+Rojo: 717
+Verde: 715
+Azul: 701
+----------------------
+Rojo: 705
+Verde: 705
+Azul: 700
+----------------------
+Rojo: 705
+Verde: 704
+Azul: 701
+----------------------
+Rojo: 707
+Verde: 709
+Azul: 703
+----------------------
+Rojo: 714
+Verde: 707
+Azul: 703
+----------------------
+Rojo: 704
+Verde: 704
+Azul: 699
+----------------------
+Rojo: 703
+Verde: 704
+Azul: 705
+----------------------
+Rojo: 704
+Verde: 707
+Azul: 694
+----------------------
+Rojo: 705
+Verde: 704
+Azul: 702
+----------------------
+Rojo: 709
+Verde: 713
+Azul: 700
+----------------------
+Rojo: 707
+Verde: 710
+Azul: 699
+----------------------
+Rojo: 703
+Verde: 709
+Azul: 701
+----------------------
+Rojo: 703
+Verde: 703
+Azul: 704
+----------------------
+Rojo: 704
+Verde: 703
+Azul: 694
+----------------------
+Rojo: 711
+Verde: 710
+Azul: 697
+----------------------
+Rojo: 713
+Verde: 705
+Azul: 702
+----------------------
+Rojo: 708
+Verde: 704
+Azul: 694
+----------------------
+Rojo: 707
+Verde: 709
+Azul: 701
+----------------------
+Rojo: 704
+Verde: 714
+Azul: 702
+----------------------
+Rojo: 715
+Verde: 711
+Azul: 699
+----------------------
+Rojo: 703
+Verde: 706
+Azul: 694
+----------------------
+Rojo: 710
+Verde: 719
+Azul: 704
+----------------------
+Rojo: 715
+Verde: 709
+Azul: 705
+----------------------
+Rojo: 703
+Verde: 714
+Azul: 704
+----------------------
+Rojo: 717
+Verde: 710
+Azul: 705
+----------------------
+Rojo: 706
+Verde: 704
+Azul: 692
+----------------------
+Rojo: 704
+Verde: 707
+Azul: 700
+----------------------
+Rojo: 707
+Verde: 704
+Azul: 695
+----------------------
+Rojo: 89
+Verde: 112
+Azul: 52
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 51
+Verde: 48
+Azul: 32
+----------------------
+Rojo: 29
+Verde: 51
+Azul: 34
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 986
+Verde: 483
+Azul: 502
+----------------------
+Rojo: 621
+Verde: 528
+Azul: 439
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 925
+Verde: 935
+Azul: 922
+----------------------
+Rojo: 901
+Verde: 912
+Azul: 895
+----------------------
+Rojo: 894
+Verde: 906
+Azul: 894
+----------------------
+Rojo: 887
+Verde: 903
+Azul: 891
+----------------------
+Rojo: 898
+Verde: 896
+Azul: 881
+----------------------
+Rojo: 894
+Verde: 898
+Azul: 880
+----------------------
+Rojo: 889
+Verde: 895
+Azul: 885
+----------------------
+Rojo: 890
+Verde: 893
+Azul: 880
+----------------------
+Rojo: 885
+Verde: 895
+Azul: 877
+----------------------
+Rojo: 880
+Verde: 899
+Azul: 882
+----------------------
+Rojo: 882
+Verde: 893
+Azul: 880
+----------------------
+Rojo: 881
+Verde: 891
+Azul: 880
+----------------------
+Rojo: 891
+Verde: 895
+Azul: 881
+----------------------
+Rojo: 889
+Verde: 892
+Azul: 883
+----------------------
+Rojo: 880
+Verde: 887
+Azul: 878
+----------------------
+Rojo: 880
+Verde: 883
+Azul: 883
+----------------------
+Rojo: 886
+Verde: 898
+Azul: 875
+----------------------
+Rojo: 887
+Verde: 891
+Azul: 871
+----------------------
+Rojo: 880
+Verde: 880
+Azul: 880
+----------------------
+Rojo: 885
+Verde: 884
+Azul: 873
+----------------------
+Rojo: 880
+Verde: 885
+Azul: 877
+----------------------
+Rojo: 877
+Verde: 882
+Azul: 880
+----------------------
+Rojo: 880
+Verde: 881
+Azul: 880
+----------------------
+Rojo: 881
+Verde: 887
+Azul: 878
+----------------------
+Rojo: 878
+Verde: 889
+Azul: 868
+----------------------
+Rojo: 880
+Verde: 886
+Azul: 870
+----------------------
+Rojo: 878
+Verde: 880
+Azul: 878
+----------------------
+Rojo: 878
+Verde: 885
+Azul: 880
+----------------------
+Rojo: 880
+Verde: 879
+Azul: 869
+----------------------
+Rojo: 871
+Verde: 885
+Azul: 866
+----------------------
+Rojo: 878
+Verde: 883
+Azul: 869
+----------------------
+Rojo: 874
+Verde: 881
+Azul: 874
+----------------------
+Rojo: 879
+Verde: 884
+Azul: 875
+----------------------
+Rojo: 879
+Verde: 885
+Azul: 867
+----------------------
+Rojo: 877
+Verde: 880
+Azul: 869
+----------------------
+Rojo: 880
+Verde: 882
+Azul: 871
+----------------------
+Rojo: 867
+Verde: 882
+Azul: 870
+----------------------
+Rojo: 880
+Verde: 881
+Azul: 869
+----------------------
+Rojo: 880
+Verde: 889
+Azul: 875
+----------------------
+Rojo: 870
+Verde: 885
+Azul: 880
+----------------------
+Rojo: 880
+Verde: 881
+Azul: 880
+----------------------
+Rojo: 879
+Verde: 880
+Azul: 867
+----------------------
+Rojo: 880
+Verde: 886
+Azul: 873
+----------------------
+Rojo: 874
+Verde: 886
+Azul: 869
+----------------------
+Rojo: 878
+Verde: 887
+Azul: 871
+----------------------
+Rojo: 877
+Verde: 883
+Azul: 867
+----------------------
+Rojo: 881
+Verde: 880
+Azul: 873
+----------------------
+Rojo: 879
+Verde: 884
+Azul: 869
+----------------------
+Rojo: 880
+Verde: 879
+Azul: 875
+----------------------
+Rojo: 880
+Verde: 881
+Azul: 871
+----------------------
+Rojo: 880
+Verde: 890
+Azul: 874
+----------------------
+Rojo: 880
+Verde: 880
+Azul: 876
+----------------------
+Rojo: 880
+Verde: 882
+Azul: 879
+----------------------
+Rojo: 887
+Verde: 891
+Azul: 885
+----------------------
+Rojo: 1039
+Verde: 1290
+Azul: 1575
+----------------------
+Rojo: 4043
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 712
+Verde: 1504
+Azul: 1899
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 3754
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 268
+Verde: 261
+Azul: 198
+----------------------
+Rojo: 1696
+Verde: 1673
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2083
+Verde: 2046
+Azul: 2032
+----------------------
+Rojo: 2173
+Verde: 2179
+Azul: 2125
+----------------------
+Rojo: 1648
+Verde: 1664
+Azul: 1660
+----------------------
+Rojo: 1661
+Verde: 1661
+Azul: 1660
+----------------------
+Rojo: 1659
+Verde: 1663
+Azul: 1651
+----------------------
+Rojo: 1655
+Verde: 1667
+Azul: 1648
+----------------------
+Rojo: 1650
+Verde: 1659
+Azul: 1658
+----------------------
+Rojo: 1665
+Verde: 1675
+Azul: 1664
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1657
+Verde: 1661
+Azul: 1636
+----------------------
+Rojo: 1641
+Verde: 1659
+Azul: 1619
+----------------------
+Rojo: 1648
+Verde: 1648
+Azul: 1639
+----------------------
+Rojo: 1651
+Verde: 1647
+Azul: 1644
+----------------------
+Rojo: 1647
+Verde: 1654
+Azul: 1632
+----------------------
+Rojo: 1641
+Verde: 1648
+Azul: 1635
+----------------------
+Rojo: 1639
+Verde: 1646
+Azul: 1634
+----------------------
+Rojo: 1643
+Verde: 1649
+Azul: 1637
+----------------------
+Rojo: 1646
+Verde: 1650
+Azul: 1638
+----------------------
+Rojo: 1648
+Verde: 1655
+Azul: 1635
+----------------------
+Rojo: 1646
+Verde: 1648
+Azul: 1643
+----------------------
+Rojo: 1638
+Verde: 1650
+Azul: 1642
+----------------------
+Rojo: 1643
+Verde: 1651
+Azul: 1636
+----------------------
+Rojo: 1649
+Verde: 1648
+Azul: 1637
+----------------------
+Rojo: 1635
+Verde: 1644
+Azul: 1637
+----------------------
+Rojo: 1637
+Verde: 1651
+Azul: 1641
+----------------------
+Rojo: 1639
+Verde: 1650
+Azul: 1629
+----------------------
+Rojo: 1635
+Verde: 1648
+Azul: 1635
+----------------------
+Rojo: 1647
+Verde: 1646
+Azul: 1641
+----------------------
+Rojo: 1632
+Verde: 1642
+Azul: 1631
+----------------------
+Rojo: 1639
+Verde: 1648
+Azul: 1629
+----------------------
+Rojo: 1644
+Verde: 1646
+Azul: 1630
+----------------------
+Rojo: 7
+Verde: 32
+Azul: 11
+----------------------
+Rojo: 0
+Verde: 26
+Azul: 7
+----------------------
+Rojo: 0
+Verde: 20
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 20
+Azul: 7
+----------------------
+Rojo: 0
+Verde: 23
+Azul: 2
+----------------------
+Rojo: 0
+Verde: 26
+Azul: 10
+----------------------
+Rojo: 0
+Verde: 32
+Azul: 9
+----------------------
+Rojo: 0
+Verde: 27
+Azul: 1
+----------------------
+Rojo: 0
+Verde: 25
+Azul: 7
+----------------------
+Rojo: 0
+Verde: 32
+Azul: 0
+----------------------
+Rojo: 1637
+Verde: 1647
+Azul: 1634
+----------------------
+Rojo: 1645
+Verde: 1648
+Azul: 1636
+----------------------
+Rojo: 1635
+Verde: 1646
+Azul: 1635
+----------------------
+Rojo: 1637
+Verde: 1648
+Azul: 1634
+----------------------
+Rojo: 1645
+Verde: 1644
+Azul: 1630
+----------------------
+Rojo: 1661
+Verde: 1535
+Azul: 875
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 3
+Azul: 608
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 951
+Verde: 765
+Azul: 487
+----------------------
+Rojo: 0
+Verde: 49
+Azul: 26
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 42
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 203
+Azul: 398
+----------------------
+Rojo: 64
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 781
+----------------------
+Rojo: 1609
+Verde: 1575
+Azul: 1573
+----------------------
+Rojo: 1598
+Verde: 1614
+Azul: 1586
+----------------------
+Rojo: 1595
+Verde: 1598
+Azul: 1598
+----------------------
+Rojo: 1600
+Verde: 1591
+Azul: 1587
+----------------------
+Rojo: 1598
+Verde: 1602
+Azul: 1587
+----------------------
+Rojo: 1599
+Verde: 1600
+Azul: 1602
+----------------------
+Rojo: 1601
+Verde: 1600
+Azul: 1600
+----------------------
+Rojo: 1602
+Verde: 1603
+Azul: 1594
+----------------------
+Rojo: 1605
+Verde: 1605
+Azul: 1595
+----------------------
+Rojo: 1597
+Verde: 1600
+Azul: 1600
+----------------------
+Rojo: 1604
+Verde: 1598
+Azul: 1600
+----------------------
+Rojo: 1603
+Verde: 1607
+Azul: 1595
+----------------------
+Rojo: 1601
+Verde: 1605
+Azul: 1595
+----------------------
+Rojo: 1601
+Verde: 1599
+Azul: 1589
+----------------------
+Rojo: 1601
+Verde: 1600
+Azul: 1593
+----------------------
+Rojo: 1598
+Verde: 1600
+Azul: 1587
+----------------------
+Rojo: 1600
+Verde: 1601
+Azul: 1592
+----------------------
+Rojo: 1599
+Verde: 1607
+Azul: 1596
+----------------------
+Rojo: 1609
+Verde: 1605
+Azul: 1585
+----------------------
+Rojo: 1601
+Verde: 1598
+Azul: 1587
+----------------------
+Rojo: 1594
+Verde: 1607
+Azul: 1587
+----------------------
+Rojo: 1600
+Verde: 1596
+Azul: 1588
+----------------------
+Rojo: 1598
+Verde: 1600
+Azul: 1591
+----------------------
+Rojo: 1601
+Verde: 1601
+Azul: 1587
+----------------------
+Rojo: 1598
+Verde: 1605
+Azul: 1589
+----------------------
+Rojo: 1590
+Verde: 1600
+Azul: 1584
+----------------------
+Rojo: 1616
+Verde: 1630
+Azul: 1595
+----------------------
+Rojo: 1601
+Verde: 1598
+Azul: 1591
+----------------------
+Rojo: 1596
+Verde: 1603
+Azul: 1591
+----------------------
+Rojo: 1600
+Verde: 1595
+Azul: 1591
+----------------------
+Rojo: 1594
+Verde: 1597
+Azul: 1585
+----------------------
+Rojo: 1591
+Verde: 1600
+Azul: 1594
+----------------------
+Rojo: 1603
+Verde: 1600
+Azul: 1585
+----------------------
+Rojo: 1597
+Verde: 1597
+Azul: 1591
+----------------------
+Rojo: 1598
+Verde: 1598
+Azul: 1593
+----------------------
+Rojo: 1599
+Verde: 1601
+Azul: 1591
+----------------------
+Rojo: 1603
+Verde: 1598
+Azul: 1587
+----------------------
+Rojo: 1599
+Verde: 1590
+Azul: 1591
+----------------------
+Rojo: 1602
+Verde: 1599
+Azul: 1595
+----------------------
+Rojo: 1597
+Verde: 1594
+Azul: 1584
+----------------------
+Rojo: 1597
+Verde: 1598
+Azul: 1595
+----------------------
+Rojo: 1599
+Verde: 1605
+Azul: 1595
+----------------------
+Rojo: 1600
+Verde: 1602
+Azul: 1591
+----------------------
+Rojo: 1600
+Verde: 1599
+Azul: 1585
+----------------------
+Rojo: 1591
+Verde: 1604
+Azul: 1586
+----------------------
+Rojo: 1597
+Verde: 1615
+Azul: 1589
+----------------------
+Rojo: 1597
+Verde: 1599
+Azul: 1585
+----------------------
+Rojo: 1591
+Verde: 1599
+Azul: 1589
+----------------------
+Rojo: 1591
+Verde: 1597
+Azul: 1584
+----------------------
+Rojo: 1600
+Verde: 1591
+Azul: 1587
+----------------------
+Rojo: 1603
+Verde: 1597
+Azul: 1584
+----------------------
+Rojo: 1597
+Verde: 1590
+Azul: 1585
+----------------------
+Rojo: 1597
+Verde: 1590
+Azul: 1588
+----------------------
+Rojo: 1594
+Verde: 1598
+Azul: 1589
+----------------------
+Rojo: 1596
+Verde: 1594
+Azul: 1584
+----------------------
+Rojo: 1595
+Verde: 1598
+Azul: 1584
+----------------------
+Rojo: 1590
+Verde: 1597
+Azul: 1584
+----------------------
+Rojo: 1585
+Verde: 1590
+Azul: 1584
+----------------------
+Rojo: 1593
+Verde: 1596
+Azul: 1583
+----------------------
+Rojo: 1598
+Verde: 1592
+Azul: 1581
+----------------------
+Rojo: 1594
+Verde: 1595
+Azul: 1581
+----------------------
+Rojo: 1598
+Verde: 1590
+Azul: 1584
+----------------------
+Rojo: 1591
+Verde: 1590
+Azul: 1584
+----------------------
+Rojo: 1593
+Verde: 1587
+Azul: 1584
+----------------------
+Rojo: 1584
+Verde: 1587
+Azul: 1584
+----------------------
+Rojo: 1587
+Verde: 1584
+Azul: 1585
+----------------------
+Rojo: 1588
+Verde: 1599
+Azul: 1579
+----------------------
+Rojo: 1595
+Verde: 1600
+Azul: 1585
+----------------------
+Rojo: 1592
+Verde: 1593
+Azul: 1585
+----------------------
+Rojo: 1594
+Verde: 1600
+Azul: 1583
+----------------------
+Rojo: 1595
+Verde: 1591
+Azul: 1585
+----------------------
+Rojo: 1594
+Verde: 1600
+Azul: 1591
+----------------------
+Rojo: 1591
+Verde: 1587
+Azul: 1585
+----------------------
+Rojo: 1600
+Verde: 1600
+Azul: 1588
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+����������������������������������������������������������������ojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 16
+Verde: 98
+Azul: 1598
+----------------------
+Rojo: 1439
+Verde: 1264
+Azul: 1070
+----------------------
+Rojo: 1629
+Verde: 1642
+Azul: 1629
+----------------------
+Rojo: 1643
+Verde: 1642
+Azul: 1628
+----------------------
+Rojo: 1639
+Verde: 1657
+Azul: 1627
+----------------------
+Rojo: 1628
+Verde: 1638
+Azul: 1623
+----------------------
+Rojo: 1633
+Verde: 1643
+Azul: 1627
+----------------------
+Rojo: 3
+Verde: 917
+Azul: 1302
+----------------------
+Rojo: 1600
+Verde: 1595
+Azul: 1586
+----------------------
+Rojo: 1606
+Verde: 1603
+Azul: 1573
+----------------------
+Rojo: 1616
+Verde: 1616
+Azul: 1591
+----------------------
+Rojo: 1628
+Verde: 1606
+Azul: 1599
+----------------------
+Rojo: 1600
+Verde: 1601
+Azul: 1591
+----------------------
+Rojo: 1609
+Verde: 1609
+Azul: 1591
+----------------------
+Rojo: 1599
+Verde: 1601
+Azul: 1600
+----------------------
+Rojo: 1590
+Verde: 1604
+Azul: 1590
+----------------------
+Rojo: 1591
+Verde: 1605
+Azul: 1586
+----------------------
+Rojo: 1600
+Verde: 1598
+Azul: 1583
+----------------------
+Rojo: 1588
+Verde: 1600
+Azul: 1591
+----------------------
+Rojo: 1599
+Verde: 1591
+Azul: 1584
+----------------------
+Rojo: 1589
+Verde: 1598
+Azul: 1595
+----------------------
+Rojo: 1598
+Verde: 1599
+Azul: 1585
+----------------------
+Rojo: 1600
+Verde: 1590
+Azul: 1589
+----------------------
+Rojo: 1594
+Verde: 1601
+Azul: 1584
+----------------------
+Rojo: 1600
+Verde: 1599
+Azul: 1584
+----------------------
+Rojo: 1598
+Verde: 1599
+Azul: 1584
+----------------------
+Rojo: 1594
+Verde: 1601
+Azul: 1589
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 881
+Verde: 64
+Azul: 93
+----------------------
+Rojo: 1808
+Verde: 1834
+Azul: 1846
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 144
+Azul: 661
+----------------------
+Rojo: 2174
+Verde: 2198
+Azul: 2194
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2015
+Verde: 1984
+Azul: 2115
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1190
+Verde: 1084
+Azul: 1289
+----------------------
+Rojo: 2214
+Verde: 2237
+Azul: 2260
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4048
+----------------------
+Rojo: 4091
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4080
+Azul: 4095
+----------------------
+Rojo: 4087
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4093
+Azul: 4090
+----------------------
+Rojo: 4095
+Verde: 4083
+Azul: 4083
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4090
+Azul: 4094
+----------------------
+Rojo: 4090
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4085
+Verde: 4082
+Azul: 4086
+----------------------
+Rojo: 4095
+Verde: 4087
+Azul: 4085
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4080
+Azul: 4093
+----------------------
+Rojo: 4095
+Verde: 4083
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4091
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4094
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4082
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4093
+----------------------
+Rojo: 4095
+Verde: 4080
+Azul: 4090
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4093
+Verde: 4095
+Azul: 4087
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4092
+----------------------
+Rojo: 4095
+Verde: 4089
+Azul: 4094
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 3990
+Azul: 4085
+----------------------
+Rojo: 4095
+Verde: 4078
+Azul: 4095
+----------------------
+Rojo: 4094
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4091
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4091
+Azul: 4095
+----------------------
+Rojo: 4089
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4094
+Verde: 4095
+Azul: 4086
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4087
+Verde: 4090
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4094
+Azul: 4090
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4081
+Verde: 4095
+Azul: 4082
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4070
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4090
+Azul: 4091
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4090
+Verde: 4082
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4093
+----------------------
+Rojo: 4090
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4085
+----------------------
+Rojo: 4080
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4071
+Verde: 4086
+Azul: 4092
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4083
+----------------------
+Rojo: 4082
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4086
+Verde: 4095
+Azul: 4080
+----------------------
+Rojo: 4093
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4084
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4080
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4091
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4086
+----------------------
+Rojo: 4086
+Verde: 4095
+Azul: 4091
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4090
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4089
+Azul: 4081
+----------------------
+Rojo: 4093
+Verde: 4095
+Azul: 4088
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4092
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4093
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4080
+Azul: 4095
+----------------------
+Rojo: 4094
+Verde: 4095
+Azul: 4091
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4091
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4089
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4083
+----------------------
+Rojo: 4090
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4091
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4093
+Verde: 4095
+Azul: 4087
+----------------------
+Rojo: 4082
+Verde: 4091
+Azul: 4095
+----------------------
+Rojo: 4090
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4081
+Verde: 4085
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4086
+----------------------
+Rojo: 4095
+Verde: 4085
+Azul: 4095
+----------------------
+Rojo: 4089
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4094
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4082
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4092
+----------------------
+Rojo: 4095
+Verde: 4085
+Azul: 4089
+----------------------
+Rojo: 4095
+Verde: 4094
+Azul: 4086
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4093
+Verde: 4081
+Azul: 4087
+----------------------
+Rojo: 3150
+Verde: 2965
+Azul: 1887
+----------------------
+Rojo: 1936
+Verde: 592
+Azul: 23
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 2093
+Azul: 4009
+----------------------
+Rojo: 4095
+Verde: 4091
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4090
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4083
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4094
+Verde: 4095
+Azul: 4091
+----------------------
+Rojo: 4083
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4080
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4093
+Verde: 4091
+Azul: 4093
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4074
+----------------------
+Rojo: 4080
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4074
+Verde: 4080
+Azul: 4073
+----------------------
+Rojo: 4065
+Verde: 4083
+Azul: 4065
+----------------------
+Rojo: 4071
+Verde: 4087
+Azul: 4089
+----------------------
+Rojo: 4070
+Verde: 4095
+Azul: 4061
+----------------------
+Rojo: 4070
+Verde: 4095
+Azul: 4080
+----------------------
+Rojo: 4089
+Verde: 4059
+Azul: 4081
+----------------------
+Rojo: 4095
+Verde: 4089
+Azul: 4067
+----------------------
+Rojo: 4060
+Verde: 4070
+Azul: 4064
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4064
+Verde: 4075
+Azul: 4065
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 1793
+----------------------
+Rojo: 2155
+Verde: 2192
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2416
+Verde: 2410
+Azul: 2384
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2253
+Verde: 2256
+Azul: 2231
+----------------------
+Rojo: 2242
+Verde: 2256
+Azul: 2234
+----------------------
+Rojo: 2235
+Verde: 2240
+Azul: 2239
+----------------------
+Rojo: 2253
+Verde: 2252
+Azul: 2240
+----------------------
+Rojo: 2241
+Verde: 2243
+Azul: 2241
+----------------------
+Rojo: 2243
+Verde: 2253
+Azul: 2229
+----------------------
+Rojo: 2240
+Verde: 2256
+Azul: 2238
+----------------------
+Rojo: 2244
+Verde: 2246
+Azul: 2235
+----------------------
+Rojo: 2236
+Verde: 2251
+Azul: 2236
+----------------------
+Rojo: 2238
+Verde: 2252
+Azul: 2240
+----------------------
+Rojo: 2243
+Verde: 2240
+Azul: 2231
+----------------------
+Rojo: 2234
+Verde: 2237
+Azul: 2233
+----------------------
+Rojo: 2227
+Verde: 2235
+Azul: 2233
+----------------------
+Rojo: 2238
+Verde: 2247
+Azul: 2224
+----------------------
+Rojo: 2233
+Verde: 2241
+Azul: 2214
+----------------------
+Rojo: 2239
+Verde: 2238
+Azul: 2223
+----------------------
+Rojo: 2240
+Verde: 2240
+Azul: 2224
+----------------------
+Rojo: 2225
+Verde: 2239
+Azul: 2226
+----------------------
+Rojo: 2243
+Verde: 2240
+Azul: 2225
+----------------------
+Rojo: 2225
+Verde: 2245
+Azul: 2178
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1428
+Verde: 1305
+Azul: 1347
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 198
+Azul: 188
+----------------------
+Rojo: 208
+Verde: 213
+Azul: 198
+----------------------
+Rojo: 203
+Verde: 208
+Azul: 197
+----------------------
+Rojo: 208
+Verde: 205
+Azul: 178
+----------------------
+Rojo: 191
+Verde: 162
+Azul: 171
+----------------------
+Rojo: 180
+Verde: 197
+Azul: 179
+----------------------
+Rojo: 192
+Verde: 186
+Azul: 184
+----------------------
+Rojo: 183
+Verde: 186
+Azul: 182
+----------------------
+Rojo: 181
+Verde: 190
+Azul: 183
+----------------------
+Rojo: 192
+Verde: 192
+Azul: 177
+----------------------
+Rojo: 189
+Verde: 186
+Azul: 181
+----------------------
+Rojo: 182
+Verde: 187
+Azul: 178
+----------------------
+Rojo: 182
+Verde: 195
+Azul: 176
+----------------------
+Rojo: 192
+Verde: 199
+Azul: 179
+----------------------
+Rojo: 197
+Verde: 198
+Azul: 189
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 959
+Verde: 1333
+Azul: 1680
+----------------------
+Rojo: 2147
+Verde: 2150
+Azul: 2128
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1406
+Verde: 1429
+Azul: 1573
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2484
+Verde: 2502
+Azul: 2505
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 134
+Verde: 142
+Azul: 126
+----------------------
+Rojo: 125
+Verde: 125
+Azul: 117
+----------------------
+Rojo: 121
+Verde: 124
+Azul: 96
+----------------------
+Rojo: 122
+Verde: 130
+Azul: 112
+----------------------
+Rojo: 119
+Verde: 123
+Azul: 108
+----------------------
+Rojo: 128
+Verde: 127
+Azul: 112
+----------------------
+Rojo: 121
+Verde: 134
+Azul: 117
+----------------------
+Rojo: 119
+Verde: 128
+Azul: 115
+----------------------
+Rojo: 119
+Verde: 125
+Azul: 112
+----------------------
+Rojo: 118
+Verde: 125
+Azul: 109
+----------------------
+Rojo: 129
+Verde: 128
+Azul: 112
+----------------------
+Rojo: 119
+Verde: 130
+Azul: 113
+----------------------
+Rojo: 127
+Verde: 121
+Azul: 109
+----------------------
+Rojo: 122
+Verde: 129
+Azul: 107
+----------------------
+Rojo: 113
+Verde: 125
+Azul: 112
+----------------------
+Rojo: 124
+Verde: 122
+Azul: 115
+----------------------
+Rojo: 113
+Verde: 123
+Azul: 105
+----------------------
+Rojo: 112
+Verde: 114
+Azul: 101
+----------------------
+Rojo: 113
+Verde: 128
+Azul: 111
+----------------------
+Rojo: 118
+Verde: 121
+Azul: 110
+----------------------
+Rojo: 118
+Verde: 131
+Azul: 112
+----------------------
+Rojo: 122
+Verde: 127
+Azul: 112
+----------------------
+Rojo: 118
+Verde: 122
+Azul: 112
+----------------------
+Rojo: 115
+Verde: 126
+Azul: 113
+----------------------
+Rojo: 105
+Verde: 125
+Azul: 116
+----------------------
+Rojo: 110
+Verde: 118
+Azul: 109
+----------------------
+Rojo: 114
+Verde: 121
+Azul: 106
+----------------------
+Rojo: 112
+Verde: 125
+Azul: 105
+----------------------
+Rojo: 120
+Verde: 124
+Azul: 112
+----------------------
+Rojo: 116
+Verde: 117
+Azul: 99
+----------------------
+Rojo: 112
+Verde: 121
+Azul: 101
+----------------------
+Rojo: 114
+Verde: 114
+Azul: 112
+----------------------
+Rojo: 112
+Verde: 118
+Azul: 108
+----------------------
+Rojo: 115
+Verde: 128
+Azul: 101
+----------------------
+Rojo: 119
+Verde: 118
+Azul: 112
+----------------------
+Rojo: 115
+Verde: 128
+Azul: 108
+----------------------
+Rojo: 112
+Verde: 112
+Azul: 112
+----------------------
+Rojo: 123
+Verde: 116
+Azul: 110
+----------------------
+Rojo: 111
+Verde: 113
+Azul: 107
+----------------------
+Rojo: 115
+Verde: 123
+Azul: 112
+----------------------
+Rojo: 112
+Verde: 119
+Azul: 106
+----------------------
+Rojo: 115
+Verde: 122
+Azul: 112
+----------------------
+Rojo: 116
+Verde: 128
+Azul: 106
+----------------------
+Rojo: 113
+Verde: 119
+Azul: 109
+----------------------
+Rojo: 116
+Verde: 112
+Azul: 112
+----------------------
+Rojo: 124
+Verde: 119
+Azul: 105
+----------------------
+Rojo: 119
+Verde: 114
+Azul: 105
+----------------------
+Rojo: 109
+Verde: 123
+Azul: 103
+----------------------
+Rojo: 112
+Verde: 123
+Azul: 112
+----------------------
+Rojo: 127
+Verde: 126
+Azul: 102
+----------------------
+Rojo: 119
+Verde: 123
+Azul: 103
+----------------------
+Rojo: 112
+Verde: 117
+Azul: 112
+----------------------
+Rojo: 110
+Verde: 127
+Azul: 100
+----------------------
+Rojo: 118
+Verde: 115
+Azul: 110
+----------------------
+Rojo: 113
+Verde: 124
+Azul: 112
+----------------------
+Rojo: 117
+Verde: 119
+Azul: 112
+----------------------
+Rojo: 110
+Verde: 128
+Azul: 110
+----------------------
+Rojo: 120
+Verde: 123
+Azul: 110
+----------------------
+Rojo: 116
+Verde: 112
+Azul: 105
+----------------------
+Rojo: 112
+Verde: 126
+Azul: 109
+----------------------
+Rojo: 110
+Verde: 124
+Azul: 105
+----------------------
+Rojo: 115
+Verde: 117
+Azul: 99
+----------------------
+Rojo: 111
+Verde: 117
+Azul: 112
+----------------------
+Rojo: 115
+Verde: 121
+Azul: 141
+----------------------
+Rojo: 121
+Verde: 115
+Azul: 106
+----------------------
+Rojo: 109
+Verde: 127
+Azul: 103
+----------------------
+Rojo: 121
+Verde: 117
+Azul: 105
+----------------------
+Rojo: 112
+Verde: 117
+Azul: 103
+----------------------
+Rojo: 112
+Verde: 127
+Azul: 112
+----------------------
+Rojo: 107
+Verde: 115
+Azul: 112
+----------------------
+Rojo: 112
+Verde: 128
+Azul: 106
+----------------------
+Rojo: 118
+Verde: 123
+Azul: 97
+----------------------
+Rojo: 115
+Verde: 120
+Azul: 101
+----------------------
+Rojo: 118
+Verde: 123
+Azul: 98
+----------------------
+Rojo: 112
+Verde: 121
+Azul: 109
+----------------------
+Rojo: 121
+Verde: 115
+Azul: 104
+----------------------
+Rojo: 117
+Verde: 117
+Azul: 93
+----------------------
+Rojo: 119
+Verde: 118
+Azul: 110
+----------------------
+Rojo: 114
+Verde: 112
+Azul: 106
+----------------------
+Rojo: 113
+Verde: 124
+Azul: 112
+----------------------
+Rojo: 115
+Verde: 128
+Azul: 102
+----------------------
+Rojo: 112
+Verde: 112
+Azul: 106
+----------------------
+Rojo: 111
+Verde: 112
+Azul: 105
+----------------------
+Rojo: 113
+Verde: 118
+Azul: 103
+----------------------
+Rojo: 109
+Verde: 112
+Azul: 112
+----------------------
+Rojo: 107
+Verde: 122
+Azul: 102
+----------------------
+Rojo: 121
+Verde: 123
+Azul: 103
+----------------------
+Rojo: 114
+Verde: 126
+Azul: 105
+----------------------
+Rojo: 118
+Verde: 125
+Azul: 112
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 144
+Verde: 178
+Azul: 217
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 111
+Verde: 119
+Azul: 107
+----------------------
+Rojo: 112
+Verde: 127
+Azul: 98
+----------------------
+Rojo: 112
+Verde: 112
+Azul: 105
+----------------------
+Rojo: 106
+Verde: 123
+Azul: 112
+----------------------
+Rojo: 110
+Verde: 113
+Azul: 106
+----------------------
+Rojo: 110
+Verde: 117
+Azul: 99
+----------------------
+Rojo: 106
+Verde: 119
+Azul: 106
+----------------------
+Rojo: 112
+Verde: 117
+Azul: 100
+----------------------
+Rojo: 117
+Verde: 113
+Azul: 96
+----------------------
+Rojo: 102
+Verde: 118
+Azul: 111
+----------------------
+Rojo: 112
+Verde: 115
+Azul: 107
+----------------------
+Rojo: 112
+Verde: 125
+Azul: 103
+----------------------
+Rojo: 117
+Verde: 113
+Azul: 110
+----------------------
+Rojo: 113
+Verde: 113
+Azul: 101
+----------------------
+Rojo: 114
+Verde: 113
+Azul: 108
+----------------------
+Rojo: 113
+Verde: 112
+Azul: 105
+----------------------
+Rojo: 113
+Verde: 121
+Azul: 100
+----------------------
+Rojo: 112
+Verde: 115
+Azul: 103
+----------------------
+Rojo: 117
+Verde: 122
+Azul: 95
+----------------------
+Rojo: 112
+Verde: 112
+Azul: 96
+----------------------
+Rojo: 113
+Verde: 112
+Azul: 101
+----------------------
+Rojo: 112
+Verde: 115
+Azul: 95
+----------------------
+Rojo: 115
+Verde: 118
+Azul: 99
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1999
+Verde: 2062
+Azul: 2099
+----------------------
+Rojo: 2187
+Verde: 2224
+Azul: 2229
+----------------------
+Rojo: 1758
+Verde: 2055
+Azul: 2146
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4043
+Azul: 2841
+----------------------
+Rojo: 336
+Verde: 79
+Azul: 17
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 80
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 713
+Verde: 27
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 191
+Azul: 1298
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 3959
+Azul: 164
+----------------------
+Rojo: 2609
+Verde: 2663
+Azul: 2672
+----------------------
+Rojo: 0
+Verde: 4023
+Azul: 4095
+----------------------
+Rojo: 4095
+Verde: 4095
+Azul: 4095
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 4003
+----------------------
+Rojo: 3975
+Verde: 3958
+Azul: 3968
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1424
+Verde: 1522
+Azul: 1579
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2725
+Verde: 2730
+Azul: 2706
+----------------------
+Rojo: 880
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 2269
+Verde: 1879
+Azul: 1023
+----------------------
+Rojo: 1518
+Verde: 298
+Azul: 0
+----------------------
+Rojo: 114
+Verde: 123
+Azul: 107
+----------------------
+Rojo: 129
+Verde: 134
+Azul: 122
+----------------------
+Rojo: 938
+Verde: 1153
+Azul: 1274
+----------------------
+Rojo: 227
+Verde: 261
+Azul: 370
+----------------------
+Rojo: 4020
+Verde: 4080
+Azul: 4095
+----------------------
+Rojo: 4026
+Verde: 4048
+Azul: 4031
+----------------------
+Rojo: 2864
+Verde: 2929
+Azul: 2896
+----------------------
+Rojo: 4032
+Verde: 4016
+Azul: 4035
+----------------------
+Rojo: 4017
+Verde: 4015
+Azul: 4030
+----------------------
+Rojo: 4031
+Verde: 4049
+Azul: 4044
+----------------------
+Rojo: 4041
+Verde: 4028
+Azul: 4046
+----------------------
+Rojo: 4038
+Verde: 3965
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4044
+Verde: 4036
+Azul: 4047
+----------------------
+Rojo: 4030
+Verde: 4034
+Azul: 4019
+----------------------
+Rojo: 4041
+Verde: 4050
+Azul: 4051
+----------------------
+Rojo: 4034
+Verde: 4051
+Azul: 4027
+----------------------
+Rojo: 4027
+Verde: 4025
+Azul: 4045
+----------------------
+Rojo: 4033
+Verde: 4049
+Azul: 4042
+----------------------
+����������������������������������������������������������������: 4023
+Verde: 4018
+Azul: 4053
+----------------------
+Rojo: 4048
+Verde: 4059
+Azul: 4047
+----------------------
+Rojo: 4023
+Verde: 4029
+Azul: 4042
+----------------------
+Rojo: 4032
+Verde: 4048
+Azul: 4029
+----------------------
+Rojo: 4042
+Verde: 4038
+Azul: 4050
+----------------------
+Rojo: 4031
+Verde: 4036
+Azul: 4035
+----------------------
+Rojo: 4050
+Verde: 4019
+Azul: 4031
+----------------------
+Rojo: 4044
+Verde: 4047
+Azul: 4021
+----------------------
+Rojo: 4051
+Verde: 4037
+Azul: 4043
+----------------------
+Rojo: 4037
+Verde: 4016
+Azul: 4022
+----------------------
+Rojo: 4034
+Verde: 4047
+Azul: 4031
+----------------------
+Rojo: 4049
+Verde: 4032
+Azul: 4042
+----------------------
+Rojo: 4048
+Verde: 4031
+Azul: 4031
+----------------------
+Rojo: 4021
+Verde: 4053
+Azul: 4046
+----------------------
+Rojo: 4038
+Verde: 4032
+Azul: 4048
+----------------------
+Rojo: 4041
+Verde: 4035
+Azul: 4018
+----------------------
+Rojo: 4042
+Verde: 4027
+Azul: 4045
+----------------------
+Rojo: 4046
+Verde: 4037
+Azul: 4032
+----------------------
+Rojo: 4048
+Verde: 4053
+Azul: 4027
+----------------------
+Rojo: 4047
+Verde: 4032
+Azul: 4032
+----------------------
+Rojo: 4051
+Verde: 4030
+Azul: 4033
+----------------------
+Rojo: 4035
+Verde: 4033
+Azul: 4035
+----------------------
+Rojo: 4045
+Verde: 4049
+Azul: 4037
+----------------------
+Rojo: 4045
+Verde: 4023
+Azul: 4009
+----------------------
+Rojo: 4022
+Verde: 4043
+Azul: 4032
+----------------------
+Rojo: 4038
+Verde: 4048
+Azul: 4018
+----------------------
+Rojo: 3824
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 4019
+Verde: 4015
+Azul: 3999
+----------------------
+Rojo: 4052
+Verde: 4041
+Azul: 4031
+----------------------
+Rojo: 4048
+Verde: 4038
+Azul: 4018
+----------------------
+Rojo: 4021
+Verde: 4026
+Azul: 4030
+----------------------
+Rojo: 4047
+Verde: 4045
+Azul: 4042
+----------------------
+Rojo: 4027
+Verde: 4016
+Azul: 4019
+----------------------
+Rojo: 4028
+Verde: 4045
+Azul: 4035
+----------------------
+Rojo: 4038
+Verde: 4045
+Azul: 4068
+----------------------
+Rojo: 4039
+Verde: 4020
+Azul: 4037
+----------------------
+Rojo: 4033
+Verde: 4037
+Azul: 4034
+----------------------
+Rojo: 4037
+Verde: 4048
+Azul: 4031
+----------------------
+Rojo: 4045
+Verde: 4038
+Azul: 4032
+----------------------
+Rojo: 4032
+Verde: 4038
+Azul: 4022
+----------------------
+Rojo: 4048
+Verde: 4028
+Azul: 4043
+----------------------
+Rojo: 4031
+Verde: 4041
+Azul: 4031
+----------------------
+Rojo: 4030
+Verde: 4044
+Azul: 4048
+----------------------
+Rojo: 4051
+Verde: 4038
+Azul: 4034
+----------------------
+Rojo: 4038
+Verde: 4027
+Azul: 4033
+----------------------
+Rojo: 4039
+Verde: 4029
+Azul: 4031
+----------------------
+Rojo: 4041
+Verde: 4034
+Azul: 4029
+----------------------
+Rojo: 4042
+Verde: 4050
+Azul: 4038
+----------------------
+Rojo: 4018
+Verde: 4031
+Azul: 4039
+----------------------
+Rojo: 4034
+Verde: 4054
+Azul: 4022
+----------------------
+Rojo: 4033
+Verde: 4033
+Azul: 4037
+----------------------
+Rojo: 4028
+Verde: 4045
+Azul: 4027
+----------------------
+Rojo: 4053
+Verde: 4045
+Azul: 4038
+----------------------
+Rojo: 4028
+Verde: 4033
+Azul: 4026
+----------------------
+Rojo: 4067
+Verde: 4048
+Azul: 4043
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1691
+Verde: 1697
+Azul: 1701
+----------------------
+Rojo: 1713
+Verde: 1692
+Azul: 1705
+----------------------
+Rojo: 1706
+Verde: 1706
+Azul: 1699
+----------------------
+Rojo: 1709
+Verde: 1699
+Azul: 1699
+----------------------
+Rojo: 1701
+Verde: 1696
+Azul: 1688
+----------------------
+Rojo: 1709
+Verde: 1700
+Azul: 1691
+----------------------
+Rojo: 1694
+Verde: 1699
+Azul: 1688
+----------------------
+Rojo: 1692
+Verde: 1686
+Azul: 1686
+----------------------
+Rojo: 1695
+Verde: 1703
+Azul: 1703
+----------------------
+Rojo: 1701
+Verde: 1696
+Azul: 1759
+----------------------
+Rojo: 1695
+Verde: 1695
+Azul: 1694
+----------------------
+Rojo: 1703
+Verde: 1702
+Azul: 1689
+----------------------
+Rojo: 1699
+Verde: 1695
+Azul: 1700
+----------------------
+Rojo: 1707
+Verde: 1705
+Azul: 1694
+----------------------
+Rojo: 1691
+Verde: 1698
+Azul: 1685
+----------------------
+Rojo: 1693
+Verde: 1693
+Azul: 1696
+----------------------
+Rojo: 1702
+Verde: 1697
+Azul: 1685
+----------------------
+Rojo: 1697
+Verde: 1699
+Azul: 1690
+----------------------
+Rojo: 1690
+Verde: 1699
+Azul: 1683
+----------------------
+Rojo: 1696
+Verde: 1691
+Azul: 1689
+----------------------
+Rojo: 1687
+Verde: 1695
+Azul: 1701
+----------------------
+Rojo: 1693
+Verde: 1697
+Azul: 1681
+----------------------
+Rojo: 1692
+Verde: 1697
+Azul: 1686
+----------------------
+Rojo: 1695
+Verde: 1689
+Azul: 1691
+----------------------
+Rojo: 1694
+Verde: 1690
+Azul: 1691
+----------------------
+Rojo: 1699
+Verde: 1699
+Azul: 1686
+----------------------
+Rojo: 1695
+Verde: 1685
+Azul: 1681
+----------------------
+Rojo: 1697
+Verde: 1684
+Azul: 1692
+----------------------
+Rojo: 1684
+Verde: 1694
+Azul: 1692
+----------------------
+Rojo: 1695
+Verde: 1697
+Azul: 1686
+----------------------
+Rojo: 1695
+Verde: 1693
+Azul: 1682
+----------------------
+Rojo: 1690
+Verde: 1693
+Azul: 1681
+----------------------
+Rojo: 1685
+Verde: 1690
+Azul: 1682
+----------------------
+Rojo: 1680
+Verde: 1694
+Azul: 1687
+----------------------
+Rojo: 1698
+Verde: 1694
+Azul: 1683
+----------------------
+Rojo: 1680
+Verde: 1693
+Azul: 1693
+----------------------
+Rojo: 1699
+Verde: 1694
+Azul: 1683
+----------------------
+Rojo: 1699
+Verde: 1687
+Azul: 1691
+----------------------
+Rojo: 1696
+Verde: 1690
+Azul: 1685
+----------------------
+Rojo: 1686
+Verde: 1693
+Azul: 1686
+----------------------
+Rojo: 1694
+Verde: 1701
+Azul: 1681
+----------------------
+Rojo: 1701
+Verde: 1700
+Azul: 1694
+----------------------
+Rojo: 1702
+Verde: 1703
+Azul: 1693
+----------------------
+Rojo: 1690
+Verde: 1698
+Azul: 1694
+----------------------
+Rojo: 1693
+Verde: 1693
+Azul: 1693
+----------------------
+Rojo: 1707
+Verde: 1682
+Azul: 1687
+----------------------
+Rojo: 1683
+Verde: 1693
+Azul: 1687
+----------------------
+Rojo: 1697
+Verde: 1693
+Azul: 1680
+----------------------
+Rojo: 1689
+Verde: 1687
+Azul: 1680
+----------------------
+Rojo: 1687
+Verde: 1701
+Azul: 1693
+----------------------
+Rojo: 1701
+Verde: 1682
+Azul: 1693
+----------------------
+Rojo: 1684
+Verde: 1696
+Azul: 1683
+----------------------
+Rojo: 1701
+Verde: 1687
+Azul: 1686
+----------------------
+Rojo: 1654
+Verde: 1691
+Azul: 1683
+----------------------
+Rojo: 1702
+Verde: 1686
+Azul: 1688
+----------------------
+Rojo: 1695
+Verde: 1693
+Azul: 1686
+----------------------
+Rojo: 1695
+Verde: 1685
+Azul: 1687
+----------------------
+Rojo: 1695
+Verde: 1686
+Azul: 1684
+----------------------
+Rojo: 1689
+Verde: 1691
+Azul: 1681
+----------------------
+Rojo: 1694
+Verde: 1685
+Azul: 1689
+----------------------
+Rojo: 1689
+Verde: 1695
+Azul: 1681
+----------------------
+Rojo: 1687
+Verde: 1699
+Azul: 1690
+----------------------
+Rojo: 1689
+Verde: 1690
+Azul: 1682
+----------------------
+Rojo: 1681
+Verde: 1687
+Azul: 1687
+----------------------
+Rojo: 1681
+Verde: 1693
+Azul: 1684
+----------------------
+Rojo: 1689
+Verde: 1697
+Azul: 1694
+----------------------
+Rojo: 1689
+Verde: 1695
+Azul: 1690
+----------------------
+Rojo: 1696
+Verde: 1697
+Azul: 1684
+----------------------
+Rojo: 1691
+Verde: 1679
+Azul: 1683
+----------------------
+Rojo: 1682
+Verde: 1696
+Azul: 1677
+----------------------
+Rojo: 1686
+Verde: 1700
+Azul: 1684
+----------------------
+Rojo: 1684
+Verde: 1689
+Azul: 1686
+----------------------
+Rojo: 1681
+Verde: 1689
+Azul: 1685
+----------------------
+Rojo: 1680
+Verde: 1685
+Azul: 1690
+----------------------
+Rojo: 1695
+Verde: 1682
+Azul: 1687
+----------------------
+Rojo: 1683
+Verde: 1691
+Azul: 1689
+----------------------
+Rojo: 1690
+Verde: 1680
+Azul: 1690
+----------------------
+Rojo: 1680
+Verde: 1691
+Azul: 1691
+----------------------
+Rojo: 1678
+Verde: 1698
+Azul: 1683
+----------------------
+Rojo: 1693
+Verde: 1697
+Azul: 1683
+----------------------
+Rojo: 1690
+Verde: 1694
+Azul: 1687
+----------------------
+Rojo: 1685
+Verde: 1692
+Azul: 1677
+----------------------
+Rojo: 1693
+Verde: 1690
+Azul: 1681
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 3216
+----------------------
+Rojo: 3251
+Verde: 3248
+Azul: 3238
+----------------------
+Rojo: 3222
+Verde: 3230
+Azul: 3216
+----------------------
+Rojo: 3219
+Verde: 3233
+Azul: 3233
+----------------------
+Rojo: 3223
+Verde: 3232
+Azul: 3218
+----------------------
+Rojo: 3237
+Verde: 3241
+Azul: 3216
+----------------------
+Rojo: 3218
+Verde: 3242
+Azul: 3219
+----------------------
+Rojo: 3231
+Verde: 3222
+Azul: 3227
+----------------------
+Rojo: 3223
+Verde: 3239
+Azul: 3234
+----------------------
+Rojo: 3229
+Verde: 3231
+Azul: 3243
+----------------------
+Rojo: 3216
+Verde: 3224
+Azul: 3219
+----------------------
+Rojo: 3215
+Verde: 3223
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 1694
+Verde: 1710
+Azul: 1697
+----------------------
+Rojo: 1703
+Verde: 1702
+Azul: 1691
+----------------------
+Rojo: 1697
+Verde: 1697
+Azul: 1694
+----------------------
+Rojo: 1694
+Verde: 1698
+Azul: 1691
+----------------------
+Rojo: 1698
+Verde: 1701
+Azul: 1695
+----------------------
+Rojo: 1702
+Verde: 1703
+Azul: 1687
+----------------------
+Rojo: 1699
+Verde: 1694
+Azul: 1696
+----------------------
+Rojo: 1709
+Verde: 1707
+Azul: 1686
+----------------------
+Rojo: 1702
+Verde: 1707
+Azul: 1687
+----------------------
+Rojo: 1702
+Verde: 1699
+Azul: 1691
+----------------------
+Rojo: 1703
+Verde: 1709
+Azul: 1702
+----------------------
+Rojo: 1686
+Verde: 1709
+Azul: 1703
+----------------------
+Rojo: 1699
+Verde: 1697
+Azul: 1699
+----------------------
+Rojo: 1699
+Verde: 1701
+Azul: 1700
+----------------------
+Rojo: 1690
+Verde: 1685
+Azul: 1687
+----------------------
+Rojo: 1691
+Verde: 1703
+Azul: 1697
+----------------------
+Rojo: 1699
+Verde: 1691
+Azul: 1687
+----------------------
+Rojo: 1705
+Verde: 1698
+Azul: 1685
+----------------------
+Rojo: 1681
+Verde: 1690
+Azul: 1694
+----------------------
+Rojo: 1702
+Verde: 1692
+Azul: 1686
+----------------------
+Rojo: 1703
+Verde: 1700
+Azul: 1690
+----------------------
+Rojo: 1691
+Verde: 1695
+Azul: 1690
+----------------------
+Rojo: 1690
+Verde: 1695
+Azul: 1693
+----------------------
+Rojo: 1687
+Verde: 1699
+Azul: 1680
+----------------------
+Rojo: 1697
+Verde: 1690
+Azul: 1687
+----------------------
+Rojo: 1696
+Verde: 1690
+Azul: 1694
+----------------------
+Rojo: 1686
+Verde: 1687
+Azul: 1686
+----------------------
+Rojo: 1697
+Verde: 1683
+Azul: 1688
+----------------------
+Rojo: 1693
+Verde: 1698
+Azul: 1683
+----------------------
+Rojo: 1698
+Verde: 1694
+Azul: 1686
+----------------------
+Rojo: 1690
+Verde: 1690
+Azul: 1686
+----------------------
+Rojo: 1681
+Verde: 1698
+Azul: 1683
+----------------------
+Rojo: 1691
+Verde: 1693
+Azul: 1685
+----------------------
+Rojo: 1693
+Verde: 1697
+Azul: 1683
+----------------------
+Rojo: 1697
+Verde: 1696
+Azul: 1695
+----------------------
+Rojo: 1683
+Verde: 1682
+Azul: 1683
+----------------------
+Rojo: 1697
+Verde: 1699
+Azul: 1680
+----------------------
+Rojo: 1686
+Verde: 1687
+Azul: 1686
+----------------------
+Rojo: 1692
+Verde: 1696
+Azul: 1690
+----------------------
+Rojo: 1696
+Verde: 1695
+Azul: 1693
+----------------------
+Rojo: 1687
+Verde: 1691
+Azul: 1683
+----------------------
+Rojo: 1697
+Verde: 1686
+Azul: 1680
+----------------------
+Rojo: 1691
+Verde: 1701
+Azul: 1691
+----------------------
+Rojo: 1690
+Verde: 1683
+Azul: 1695
+----------------------
+Rojo: 1691
+Verde: 1701
+Azul: 1696
+----------------------
+Rojo: 1686
+Verde: 1696
+Azul: 1677
+----------------------
+Rojo: 1691
+Verde: 1705
+Azul: 1690
+----------------------
+Rojo: 1699
+Verde: 1686
+Azul: 1690
+----------------------
+Rojo: 1697
+Verde: 1694
+Azul: 1690
+----------------------
+Rojo: 1681
+Verde: 1691
+Azul: 1697
+----------------------
+Rojo: 1689
+Verde: 1696
+Azul: 1696
+----------------------
+Rojo: 1682
+Verde: 1682
+Azul: 1679
+----------------------
+Rojo: 1694
+Verde: 1693
+Azul: 1699
+----------------------
+Rojo: 1695
+Verde: 1702
+Azul: 1682
+----------------------
+Rojo: 1691
+Verde: 1691
+Azul: 1667
+----------------------
+Rojo: 1695
+Verde: 1699
+Azul: 1675
+----------------------
+Rojo: 1685
+Verde: 1696
+Azul: 1685
+----------------------
+Rojo: 1683
+Verde: 1690
+Azul: 1677
+----------------------
+Rojo: 1695
+Verde: 1697
+Azul: 1692
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 37
+----------------------
+Rojo: 365
+Verde: 372
+Azul: 349
+----------------------
+Rojo: 366
+Verde: 370
+Azul: 356
+----------------------
+Rojo: 365
+Verde: 377
+Azul: 348
+----------------------
+Rojo: 365
+Verde: 337
+Azul: 346
+----------------------
+Rojo: 368
+Verde: 371
+Azul: 350
+----------------------
+Rojo: 358
+Verde: 371
+Azul: 355
+----------------------
+Rojo: 374
+Verde: 381
+Azul: 371
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 57
+Verde: 510
+Azul: 449
+----------------------
+Rojo: 354
+Verde: 377
+Azul: 342
+----------------------
+Rojo: 358
+Verde: 370
+Azul: 352
+----------------------
+Rojo: 362
+Verde: 368
+Azul: 347
+----------------------
+Rojo: 365
+Verde: 369
+Azul: 354
+----------------------
+Rojo: 363
+Verde: 371
+Azul: 356
+----------------------
+Rojo: 363
+Verde: 371
+Azul: 352
+----------------------
+Rojo: 368
+Verde: 370
+Azul: 358
+----------------------
+Rojo: 365
+Verde: 374
+Azul: 352
+----------------------
+Rojo: 353
+Verde: 373
+Azul: 346
+----------------------
+Rojo: 355
+Verde: 368
+Azul: 353
+----------------------
+Rojo: 362
+Verde: 368
+Azul: 352
+----------------------
+Rojo: 350
+Verde: 365
+Azul: 339
+----------------------
+Rojo: 361
+Verde: 369
+Azul: 351
+----------------------
+Rojo: 359
+Verde: 368
+Azul: 354
+----------------------
+Rojo: 355
+Verde: 368
+Azul: 342
+----------------------
+Rojo: 357
+Verde: 365
+Azul: 338
+----------------------
+Rojo: 353
+Verde: 368
+Azul: 340
+----------------------
+Rojo: 358
+Verde: 368
+Azul: 351
+----------------------
+Rojo: 355
+Verde: 368
+Azul: 349
+----------------------
+Rojo: 354
+Verde: 371
+Azul: 337
+----------------------
+Rojo: 355
+Verde: 364
+Azul: 345
+----------------------
+Rojo: 355
+Verde: 366
+Azul: 348
+----------------------
+Rojo: 354
+Verde: 405
+Azul: 344
+----------------------
+Rojo: 358
+Verde: 371
+Azul: 346
+----------------------
+Rojo: 355
+Verde: 369
+Azul: 339
+----------------------
+Rojo: 361
+Verde: 362
+Azul: 347
+----------------------
+Rojo: 356
+Verde: 366
+Azul: 339
+----------------------
+Rojo: 359
+Verde: 369
+Azul: 340
+----------------------
+Rojo: 346
+Verde: 367
+Azul: 347
+----------------------
+Rojo: 359
+Verde: 361
+Azul: 336
+----------------------
+Rojo: 351
+Verde: 365
+Azul: 348
+----------------------
+Rojo: 355
+Verde: 368
+Azul: 338
+----------------------
+Rojo: 362
+Verde: 365
+Azul: 341
+----------------------
+Rojo: 353
+Verde: 358
+Azul: 345
+----------------------
+Rojo: 351
+Verde: 370
+Azul: 341
+----------------------
+Rojo: 351
+Verde: 368
+Azul: 343
+----------------------
+Rojo: 346
+Verde: 374
+Azul: 338
+----------------------
+Rojo: 353
+Verde: 367
+Azul: 342
+----------------------
+Rojo: 354
+Verde: 361
+Azul: 343
+----------------------
+Rojo: 356
+Verde: 366
+Azul: 342
+----------------------
+Rojo: 356
+Verde: 369
+Azul: 339
+----------------------
+Rojo: 362
+Verde: 368
+Azul: 342
+----------------------
+Rojo: 360
+Verde: 388
+Azul: 363
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 368
+Verde: 393
+Azul: 378
+----------------------
+Rojo: 377
+Verde: 395
+Azul: 368
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 31
+Verde: 17
+Azul: 0
+----------------------
+Rojo: 53
+Verde: 62
+Azul: 32
+----------------------
+Rojo: 42
+Verde: 48
+Azul: 20
+----------------------
+Rojo: 95
+Verde: 112
+Azul: 100
+----------------------
+Rojo: 115
+Verde: 155
+Azul: 133
+----------------------
+Rojo: 352
+Verde: 364
+Azul: 326
+----------------------
+Rojo: 329
+Verde: 341
+Azul: 323
+----------------------
+Rojo: 337
+Verde: 346
+Azul: 322
+----------------------
+Rojo: 335
+Verde: 349
+Azul: 323
+----------------------
+Rojo: 332
+Verde: 346
+Azul: 318
+----------------------
+Rojo: 325
+Verde: 341
+Azul: 325
+----------------------
+Rojo: 336
+Verde: 347
+Azul: 321
+----------------------
+Rojo: 327
+Verde: 339
+Azul: 319
+----------------------
+Rojo: 331
+Verde: 342
+Azul: 321
+----------------------
+Rojo: 326
+Verde: 343
+Azul: 313
+----------------------
+Rojo: 327
+Verde: 345
+Azul: 313
+----------------------
+Rojo: 322
+Verde: 347
+Azul: 318
+----------------------
+Rojo: 325
+Verde: 340
+Azul: 320
+----------------------
+Rojo: 336
+Verde: 345
+Azul: 319
+----------------------
+Rojo: 331
+Verde: 340
+Azul: 319
+----------------------
+Rojo: 335
+Verde: 336
+Azul: 311
+----------------------
+Rojo: 336
+Verde: 345
+Azul: 319
+----------------------
+Rojo: 330
+Verde: 339
+Azul: 317
+----------------------
+Rojo: 331
+Verde: 336
+Azul: 315
+----------------------
+Rojo: 320
+Verde: 345
+Azul: 318
+----------------------
+Rojo: 320
+Verde: 336
+Azul: 320
+----------------------
+Rojo: 320
+Verde: 346
+Azul: 317
+----------------------
+Rojo: 335
+Verde: 341
+Azul: 317
+----------------------
+Rojo: 335
+Verde: 336
+Azul: 317
+----------------------
+Rojo: 331
+Verde: 339
+Azul: 311
+----------------------
+Rojo: 336
+Verde: 344
+Azul: 311
+----------------------
+Rojo: 323
+Verde: 349
+Azul: 319
+----------------------
+Rojo: 330
+Verde: 342
+Azul: 318
+----------------------
+Rojo: 329
+Verde: 338
+Azul: 310
+----------------------
+Rojo: 322
+Verde: 336
+Azul: 319
+----------------------
+Rojo: 325
+Verde: 338
+Azul: 320
+----------------------
+Rojo: 323
+Verde: 347
+Azul: 312
+----------------------
+Rojo: 327
+Verde: 347
+Azul: 320
+----------------------
+Rojo: 325
+Verde: 338
+Azul: 321
+----------------------
+Rojo: 333
+Verde: 333
+Azul: 321
+----------------------
+Rojo: 331
+Verde: 337
+Azul: 320
+----------------------
+Rojo: 329
+Verde: 340
+Azul: 311
+----------------------
+Rojo: 330
+Verde: 338
+Azul: 313
+----------------------
+Rojo: 322
+Verde: 342
+Azul: 321
+----------------------
+Rojo: 334
+Verde: 335
+Azul: 320
+----------------------
+Rojo: 331
+Verde: 339
+Azul: 315
+----------------------
+Rojo: 321
+Verde: 341
+Azul: 321
+----------------------
+Rojo: 330
+Verde: 337
+Azul: 322
+----------------------
+Rojo: 324
+Verde: 349
+Azul: 324
+----------------------
+Rojo: 334
+Verde: 344
+Azul: 315
+----------------------
+Rojo: 331
+Verde: 342
+Azul: 317
+----------------------
+Rojo: 329
+Verde: 343
+Azul: 320
+----------------------
+Rojo: 325
+Verde: 347
+Azul: 318
+----------------------
+Rojo: 322
+Verde: 340
+Azul: 309
+----------------------
+Rojo: 330
+Verde: 352
+Azul: 319
+----------------------
+Rojo: 331
+Verde: 336
+Azul: 320
+----------------------
+Rojo: 333
+Verde: 333
+Azul: 306
+----------------------
+Rojo: 327
+Verde: 334
+Azul: 320
+----------------------
+Rojo: 331
+Verde: 349
+Azul: 313
+----------------------
+Rojo: 330
+Verde: 351
+Azul: 321
+----------------------
+Rojo: 334
+Verde: 341
+Azul: 320
+----------------------
+Rojo: 332
+Verde: 343
+Azul: 326
+----------------------
+Rojo: 328
+Verde: 346
+Azul: 316
+----------------------
+Rojo: 323
+Verde: 336
+Azul: 310
+----------------------
+Rojo: 329
+Verde: 340
+Azul: 307
+----------------------
+Rojo: 326
+Verde: 341
+Azul: 309
+----------------------
+Rojo: 330
+Verde: 336
+Azul: 320
+----------------------
+Rojo: 321
+Verde: 341
+Azul: 314
+----------------------
+Rojo: 335
+Verde: 336
+Azul: 316
+----------------------
+Rojo: 322
+Verde: 337
+Azul: 310
+----------------------
+Rojo: 334
+Verde: 337
+Azul: 313
+----------------------
+Rojo: 323
+Verde: 336
+Azul: 309
+----------------------
+Rojo: 324
+Verde: 336
+Azul: 322
+----------------------
+Rojo: 327
+Verde: 336
+Azul: 315
+----------------------
+Rojo: 318
+Verde: 335
+Azul: 319
+----------------------
+Rojo: 330
+Verde: 346
+Azul: 320
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 0
+Verde: 0
+Azul: 0
+----------------------
+Rojo: 354
+Verde: 350
+Azul: 322
+----------------------
+Rojo: 337
+Verde: 337
+Azul: 317
+----------------------
+Rojo: 324
+Verde: 350
+Azul: 324
+----------------------
+Rojo: 339
+Verde: 362
+Azul: 353
+----------------------
+Rojo: 357
+Verde: 368
+Azul: 338
+----------------------
+Rojo: 352
+Verde: 368
+Azul: 341
+----------------------
+Rojo: 349
+Verde: 369
+Azul: 336
+----------------------
+Rojo: 352
+Verde: 368
+Azul: 342
+----------------------
+Rojo: 354
+Verde: 379
+Azul: 351
+----------------------

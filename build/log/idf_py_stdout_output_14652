@@ -1,0 +1,454 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5-2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Paulina\Desktop\Practicas_Microcontroladores\Proyecto_Color_ADC\build\..elf C:\Users\Paulina\Desktop\Practicas_Microcontroladores\Proyecto_Color_ADC\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5-2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-598-gbc7a18fe63 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 23 2026 20:30:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09974h ( 39284) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001999c vaddr=3ffb0000 size=02834h ( 10292) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001c1d8 vaddr=40080000 size=03e40h ( 15936) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=10780h ( 67456) map[0m
+[0;32mI (135) esp_image: segment 4: paddr=000307a8 vaddr=40083e40 size=08fd8h ( 36824) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00039788 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (176) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (179) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     .[0m
+[0;32mI (186) app_init: App version:      1[0m
+[0;32mI (189) app_init: Compile time:     Apr 23 2026 20:29:20[0m
+[0;32mI (194) app_init: ELF file SHA256:  280bf1a98...[0m
+[0;32mI (199) app_init: ESP-IDF:          v5.5.2-598-gbc7a18fe63[0m
+[0;32mI (204) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (208) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (212) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (216) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (222) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 3FFB3100 len 0002CF00 (179 KiB): DRAM[0m
+[0;32mI (232) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (237) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 4008CE18 len 000131E8 (76 KiB): IRAM[0m
+[0;32mI (250) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (255) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (267) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (285) main_task: Calling app_main()[0m
+
+-----------
+Ambiente: 2417
+R: 2524 | V: 2443 | A: 2521
+R real: 107 | V real: 26 | A real: 104
+Resultado: VERDE
+
+-----------
+Ambiente: 2419
+R: 2538 | V: 2442 | A: 2515
+R real: 119 | V real: 23 | A real: 96
+Resultado: VERDE
+
+-----------
+Ambiente: 2417
+R: 2529 | V: 2442 | A: 2511
+R real: 112 | V real: 25 | A real: 94
+Resultado: VERDE
+
+-----------
+Ambiente: 3728
+R: 3734 | V: 3743 | A: 3739
+R real: 6 | V real: 15 | A real: 11
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3723
+R: 3733 | V: 3739 | A: 3729
+R real: 10 | V real: 16 | A real: 6
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 2804
+R: 3740 | V: 3735 | A: 3735
+R real: 936 | V real: 931 | A real: 931
+Resultado: VERDE
+
+-----------
+Ambiente: 3740
+R: 3729 | V: 3719 | A: 3728
+R real: -11 | V real: -21 | A real: -12
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3727
+R: 3741 | V: 3739 | A: 3737
+R real: 14 | V real: 12 | A real: 10
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3731
+R: 3735 | V: 3740 | A: 3725
+R real: 4 | V real: 9 | A real: -6
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3722
+R: 3730 | V: 3739 | A: 3724
+R real: 8 | V real: 17 | A real: 2
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3740
+R: 3742 | V: 3739 | A: 3725
+R real: 2 | V real: -1 | A real: -15
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3730
+R: 3730 | V: 3744 | A: 3737
+R real: 0 | V real: 14 | A real: 7
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3728
+R: 3727 | V: 3735 | A: 3733
+R real: -1 | V real: 7 | A real: 5
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3728
+R: 3731 | V: 3745 | A: 3737
+R real: 3 | V real: 17 | A real: 9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3737
+R: 3703 | V: 3733 | A: 3728
+R real: -34 | V real: -4 | A real: -9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3729
+R: 3723 | V: 3737 | A: 3735
+R real: -6 | V real: 8 | A real: 6
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 1268
+R: 1905 | V: 1341 | A: 1406
+R real: 637 | V real: 73 | A real: 138
+Resultado: ROJO
+
+-----------
+Ambiente: 1252
+R: 1886 | V: 1331 | A: 1392
+R real: 634 | V real: 79 | A real: 140
+Resultado: ROJO
+
+-----------
+Ambiente: 1248
+R: 1881 | V: 1344 | A: 1622
+R real: 633 | V real: 96 | A real: 374
+Resultado: ROJO
+
+-----------
+Ambiente: 3721
+R: 3732 | V: 3749 | A: 3730
+R real: 11 | V real: 28 | A real: 9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 464
+R: 791 | V: 577 | A: 755
+R real: 327 | V real: 113 | A real: 291
+Resultado: VERDE
+
+-----------
+Ambiente: 355
+R: 683 | V: 496 | A: 702
+R real: 328 | V real: 141 | A real: 347
+Resultado: VERDE
+
+-----------
+Ambiente: 3725
+R: 3728 | V: 3725 | A: 3728
+R real: 3 | V real: 0 | A real: 3
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 2414
+R: 2529 | V: 2438 | A: 2512
+R real: 115 | V real: 24 | A real: 98
+Resultado: VERDE
+
+-----------
+Ambiente: 2411
+R: 2526 | V: 2429 | A: 2509
+R real: 115 | V real: 18 | A real: 98
+Resultado: VERDE
+
+-----------
+Ambiente: 2410
+R: 2527 | V: 2434 | A: 2502
+R real: 117 | V real: 24 | A real: 92
+Resultado: VERDE
+
+-----------
+Ambiente: 3725
+R: 3731 | V: 3728 | A: 3737
+R real: 6 | V real: 3 | A real: 12
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3728
+R: 3727 | V: 3516 | A: 2166
+R real: -1 | V real: -212 | A real: -1562
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 1038
+R: 2303 | V: 1149 | A: 1169
+R real: 1265 | V real: 111 | A real: 131
+Resultado: ROJO
+
+-----------
+Ambiente: 563
+R: 672 | V: 615 | A: 1001
+R real: 109 | V real: 52 | A real: 438
+Resultado: AZUL
+
+-----------
+Ambiente: 533
+R: 638 | V: 585 | A: 976
+R real: 105 | V real: 52 | A real: 443
+Resultado: AZUL
+
+-----------
+Ambiente: 511
+R: 621 | V: 570 | A: 961
+R real: 110 | V real: 59 | A real: 450
+Resultado: AZUL
+
+-----------
+Ambiente: 475
+R: 523 | V: 1804 | A: 1930
+R real: 48 | V real: 1329 | A real: 1455
+Resultado: AZUL
+
+-----------
+Ambiente: 3729
+R: 3726 | V: 3717 | A: 3715
+R real: -3 | V real: -12 | A real: -14
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3721
+R: 3723 | V: 3728 | A: 3719
+R real: 2 | V real: 7 | A real: -2
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3728
+R: 3728 | V: 3725 | A: 3723
+R real: 0 | V real: -3 | A real: -5
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3714
+R: 3731 | V: 3739 | A: 3719
+R real: 17 | V real: 25 | A real: 5
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3719
+R: 3728 | V: 3726 | A: 3726
+R real: 9 | V real: 7 | A real: 7
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3723
+R: 3731 | V: 3730 | A: 3725
+R real: 8 | V real: 7 | A real: 2
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3719
+R: 3723 | V: 3725 | A: 3727
+R real: 4 | V real: 6 | A real: 8
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3725
+R: 3723 | V: 3728 | A: 3727
+R real: -2 | V real: 3 | A real: 2
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3729
+R: 3721 | V: 3737 | A: 3726
+R real: -8 | V real: 8 | A real: -3
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3726
+R: 3722 | V: 3728 | A: 3717
+R real: -4 | V real: 2 | A real: -9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3725
+R: 3725 | V: 3723 | A: 3715
+R real: 0 | V real: -2 | A real: -10
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3724
+R: 3728 | V: 3729 | A: 3728
+R real: 4 | V real: 5 | A real: 4
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3722
+R: 3715 | V: 3731 | A: 3718
+R real: -7 | V real: 9 | A real: -4
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3715
+R: 3734 | V: 3728 | A: 3730
+R real: 19 | V real: 13 | A real: 15
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3712
+R: 3710 | V: 3738 | A: 3733
+R real: -2 | V real: 26 | A real: 21
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3713
+R: 3740 | V: 3730 | A: 3717
+R real: 27 | V real: 17 | A real: 4
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3717
+R: 3722 | V: 3730 | A: 3714
+R real: 5 | V real: 13 | A real: -3
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3723
+R: 3721 | V: 3718 | A: 3721
+R real: -2 | V real: -5 | A real: -2
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3725
+R: 3723 | V: 3726 | A: 3712
+R real: -2 | V real: 1 | A real: -13
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3710
+R: 3727 | V: 3722 | A: 3725
+R real: 17 | V real: 12 | A real: 15
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3719
+R: 3723 | V: 3728 | A: 3728
+R real: 4 | V real: 9 | A real: 9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 1354
+R: 1211 | V: 986 | A: 1086
+R real: -143 | V real: -368 | A real: -268
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 858
+R: 944 | V: 909 | A: 1060
+R real: 86 | V real: 51 | A real: 202
+Resultado: VERDE
+
+-----------
+Ambiente: 831
+R: 919 | V: 889 | A: 1047
+R real: 88 | V real: 58 | A real: 216
+Resultado: VERDE
+
+-----------
+Ambiente: 3219
+R: 3313 | V: 3301 | A: 3309
+R real: 94 | V real: 82 | A real: 90
+Resultado: VERDE
+
+-----------
+Ambiente: 3315
+R: 3317 | V: 3315 | A: 3319
+R real: 2 | V real: 0 | A real: 4
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 2498
+R: 2642 | V: 2533 | A: 2559
+R real: 144 | V real: 35 | A real: 61
+Resultado: VERDE
+
+-----------
+Ambiente: 2515
+R: 2643 | V: 2549 | A: 2559
+R real: 128 | V real: 34 | A real: 44
+Resultado: VERDE
+
+-----------
+Ambiente: 2535
+R: 2663 | V: 2551 | A: 2559
+R real: 128 | V real: 16 | A real: 24
+Resultado: VERDE
+
+-----------
+Ambiente: 2513
+R: 2645 | V: 2544 | A: 2559
+R real: 132 | V real: 31 | A real: 46
+Resultado: VERDE
+
+-----------
+Ambiente: 2517
+R: 2646 | V: 2544 | A: 2559
+R real: 129 | V real: 27 | A real: 42
+Resultado: VERDE
+
+-----------
+Ambiente: 3583
+R: 3601 | V: 3583 | A: 3574
+R real: 18 | V real: 0 | A real: -9
+Resultado: SIN COLOR / MUY OSCURO
+
+-----------
+Ambiente: 3582
+R: 3575 | V: 3583 | A: 3580
+R real: -7 | V real: 1 | A real: -2
+Resultado: SIN COLOR / MUY OSCURO
