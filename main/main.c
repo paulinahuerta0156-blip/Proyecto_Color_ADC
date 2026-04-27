@@ -199,7 +199,7 @@ const char* detectar_color(void)
         return "SIN COLOR";
     }
 
-    if (Gf >= Rf && Gf >= (Bf - 80))
+    if (Gf >= Rf && Gf >= Bf)
     {
         return "VERDE";
     }
@@ -274,12 +274,21 @@ void medir_color(void)
     if (Rf < 0) Rf = 0;
     if (Gf < 0) Gf = 0;
     if (Bf < 0) Bf = 0;
-
-    // Ajuste de sensibilidad del canal verde
-    Gf = Gf * 1.25;
     
-    // Ajuste de sensibilidad del canal verde
-    Bf = Bf * 0.70;
+//AJUSTES DE SENSIBILIDAD DE LOS CANALES EN FUNCION 
+//DE LAS RESISTENCIAS Y LOS RESULTADOS
+
+//Ajuste de la sensibilidad del verde
+Gf = Gf * 1;
+
+//Ajuste de la sensibilidad del azul
+Bf = Bf * 1;
+
+//Ajuste de la sensibilidad del rojo
+Bf = Bf * 0.70;
+
+
+
     
 }
 
