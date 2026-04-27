@@ -14,7 +14,7 @@
 #define BTN_2 GPIO_NUM_13  // Verde
 #define BTN_3 GPIO_NUM_14  // Azul
 
-#define LDR_CHANNEL ADC1_CHANNEL_4  // GPIO32
+#define ADC_CHANNEL ADC1_CHANNEL_4  // GPIO32
 
 // ===== VARIABLES =====
 int R = 0, G = 0, B = 0;
@@ -49,7 +49,7 @@ void app_main(void)
     // ===== CONFIGURAR ADC (LDR) =====
     
     adc1_config_width(ADC_WIDTH_BIT_12);          // 0–4095
-    adc1_config_channel_atten(LDR_CHANNEL, ADC_ATTEN_DB_12);
+    adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN_DB_12);
 
    
     while (1)
@@ -70,7 +70,7 @@ void app_main(void)
 
             vTaskDelay(pdMS_TO_TICKS(100)); // Estabiliza luz.
 
-            R = adc1_get_raw(LDR_CHANNEL); // Lee la LDR.
+            R = adc1_get_raw(ADC_CHANNEL); // Lee la LDR.
         }
 
         // VERDE
@@ -82,7 +82,7 @@ void app_main(void)
 
             vTaskDelay(pdMS_TO_TICKS(100));
 
-            G = adc1_get_raw(LDR_CHANNEL);
+            G = adc1_get_raw(ADC_CHANNEL);
         }
 
         // AZUL
@@ -94,7 +94,7 @@ void app_main(void)
 
             vTaskDelay(pdMS_TO_TICKS(100));
 
-            B = adc1_get_raw(LDR_CHANNEL);
+            B = adc1_get_raw(ADC_CHANNEL);
         }
 
         else
