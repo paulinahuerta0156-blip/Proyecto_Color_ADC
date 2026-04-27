@@ -6,22 +6,35 @@
 #include "driver/adc.h"
 #include "driver/i2c.h"
 
-// Pines LEDs
 #define LED_R GPIO_NUM_5
 #define LED_G GPIO_NUM_17
 #define LED_B GPIO_NUM_18
 
-// ADC
+#define BTN_1 GPIO_NUM_25
+#define BTN_2 GPIO_NUM_13
+#define BTN_3 GPIO_NUM_14
+
 #define ADC_CHANNEL ADC1_CHANNEL_4
 
-// OLED I2C
 #define I2C_MASTER_SCL_IO 22
 #define I2C_MASTER_SDA_IO 21
 #define I2C_MASTER_NUM I2C_NUM_0
 #define I2C_MASTER_FREQ_HZ 100000
 #define OLED_ADDR 0x3C
 
-//CONFIGURACION DE LA PANTALLA
+int base, R, G, B;
+int Rf, Gf, Bf;
+
+int modo = 0;
+int congelado = 0;
+int escala = 0;
+
+float Rp, Gp, Bp;
+
+int estado_anterior_b1 = 1;
+int estado_anterior_b2 = 1;
+int estado_anterior_b3 = 1;
+
 void i2c_master_init(void)
 {
     i2c_config_t conf = {
@@ -51,7 +64,6 @@ void oled_data(uint8_t *data, size_t len)
     i2c_master_write_to_device(I2C_MASTER_NUM, OLED_ADDR, buffer, len + 1, pdMS_TO_TICKS(1000));
 }
 
-//INICIALIZACION DE LA PANTALLA
 void oled_init(void)
 {
     vTaskDelay(pdMS_TO_TICKS(100));
@@ -108,7 +120,6 @@ void get_char(char c, uint8_t font[5])
 {
     memset(font, 0x00, 5);
 
-//SWITCH PARA RELACIONAR PIXELES CON CADA CARACTER
     switch (c)
     {
         case '0': {uint8_t f[5]={0x3E,0x51,0x49,0x45,0x3E}; memcpy(font,f,5);} break;
@@ -130,20 +141,24 @@ void get_char(char c, uint8_t font[5])
         case 'F': {uint8_t f[5]={0x7F,0x09,0x09,0x09,0x01}; memcpy(font,f,5);} break;
         case 'G': {uint8_t f[5]={0x3E,0x41,0x49,0x49,0x7A}; memcpy(font,f,5);} break;
         case 'I': {uint8_t f[5]={0x00,0x41,0x7F,0x41,0x00}; memcpy(font,f,5);} break;
+        case 'J': {uint8_t f[5]={0x20,0x40,0x41,0x3F,0x01}; memcpy(font,f,5);} break;
         case 'L': {uint8_t f[5]={0x7F,0x40,0x40,0x40,0x40}; memcpy(font,f,5);} break;
         case 'M': {uint8_t f[5]={0x7F,0x02,0x0C,0x02,0x7F}; memcpy(font,f,5);} break;
         case 'N': {uint8_t f[5]={0x7F,0x04,0x08,0x10,0x7F}; memcpy(font,f,5);} break;
         case 'O': {uint8_t f[5]={0x3E,0x41,0x41,0x41,0x3E}; memcpy(font,f,5);} break;
+        case 'P': {uint8_t f[5]={0x7F,0x09,0x09,0x09,0x06}; memcpy(font,f,5);} break;
         case 'R': {uint8_t f[5]={0x7F,0x09,0x19,0x29,0x46}; memcpy(font,f,5);} break;
         case 'S': {uint8_t f[5]={0x46,0x49,0x49,0x49,0x31}; memcpy(font,f,5);} break;
         case 'T': {uint8_t f[5]={0x01,0x01,0x7F,0x01,0x01}; memcpy(font,f,5);} break;
         case 'U': {uint8_t f[5]={0x3F,0x40,0x40,0x40,0x3F}; memcpy(font,f,5);} break;
         case 'V': {uint8_t f[5]={0x1F,0x20,0x40,0x20,0x1F}; memcpy(font,f,5);} break;
+        case 'W': {uint8_t f[5]={0x7F,0x20,0x18,0x20,0x7F}; memcpy(font,f,5);} break;
         case 'Z': {uint8_t f[5]={0x61,0x51,0x49,0x45,0x43}; memcpy(font,f,5);} break;
 
         case ':': {uint8_t f[5]={0x00,0x36,0x36,0x00,0x00}; memcpy(font,f,5);} break;
-        case '/': {uint8_t f[5]={0x20,0x10,0x08,0x04,0x02}; memcpy(font,f,5);} break;
         case '-': {uint8_t f[5]={0x08,0x08,0x08,0x08,0x08}; memcpy(font,f,5);} break;
+        case '.': {uint8_t f[5]={0x00,0x60,0x60,0x00,0x00}; memcpy(font,f,5);} break;
+        case '%': {uint8_t f[5]={0x23,0x13,0x08,0x64,0x62}; memcpy(font,f,5);} break;
         case ' ': default: break;
     }
 }
@@ -153,14 +168,7 @@ void oled_write_char(char c)
     uint8_t font[5];
     get_char(c, font);
 
-    uint8_t data[6];
-    data[0] = font[0];
-    data[1] = font[1];
-    data[2] = font[2];
-    data[3] = font[3];
-    data[4] = font[4];
-    data[5] = 0x00;
-
+    uint8_t data[6] = {font[0], font[1], font[2], font[3], font[4], 0x00};
     oled_data(data, 6);
 }
 
@@ -184,12 +192,138 @@ void oled_print_line(uint8_t line, const char *text)
     oled_write_string(text);
 }
 
-//LECTURA DE COLORES MEDIANTE ADC
+const char* detectar_color(void)
+{
+    if (Rf < 80 && Gf < 80 && Bf < 80)
+    {
+        return "SIN COLOR";
+    }
+
+    if (Gf >= Rf && Gf >= Bf)
+    {
+        return "VERDE";
+    }
+    else if (Rf >= Gf && Rf >= Bf)
+    {
+        return "ROJO";
+    }
+    else
+    {
+        return "AZUL";
+    }
+}
+
+void leer_botones(void)
+{
+    int b1 = gpio_get_level(BTN_1);
+    int b2 = gpio_get_level(BTN_2);
+    int b3 = gpio_get_level(BTN_3);
+
+    if (b1 == 0 && estado_anterior_b1 == 1)
+    {
+        modo = !modo;
+        printf("CAMBIO DE MODO\n");
+    }
+
+    estado_anterior_b1 = b1;
+
+    if (b2 == 0 && estado_anterior_b2 == 1)
+    {
+        congelado = !congelado;
+        printf(congelado ? "CONGELADO\n" : "REANUDADO\n");
+    }
+
+    estado_anterior_b2 = b2;
+
+    if (b3 == 0 && estado_anterior_b3 == 1)
+    {
+        escala = !escala;
+        printf(escala ? "ESCALA: %%\n" : "ESCALA: RAW\n");
+    }
+
+    estado_anterior_b3 = b3;
+}
+
+void medir_color(void)
+{
+    gpio_set_level(LED_R, 0);
+    gpio_set_level(LED_G, 0);
+    gpio_set_level(LED_B, 0);
+    vTaskDelay(pdMS_TO_TICKS(200));
+    base = adc1_get_raw(ADC_CHANNEL);
+
+    gpio_set_level(LED_R, 1);
+    vTaskDelay(pdMS_TO_TICKS(200));
+    R = adc1_get_raw(ADC_CHANNEL);
+    gpio_set_level(LED_R, 0);
+
+    gpio_set_level(LED_G, 1);
+    vTaskDelay(pdMS_TO_TICKS(200));
+    G = adc1_get_raw(ADC_CHANNEL);
+    gpio_set_level(LED_G, 0);
+
+    gpio_set_level(LED_B, 1);
+    vTaskDelay(pdMS_TO_TICKS(200));
+    B = adc1_get_raw(ADC_CHANNEL);
+    gpio_set_level(LED_B, 0);
+
+    Rf = R - base;
+    Gf = G - base;
+    Bf = B - base;
+
+    if (Rf < 0) Rf = 0;
+    if (Gf < 0) Gf = 0;
+    if (Bf < 0) Bf = 0;
+    
+//AJUSTES DE SENSIBILIDAD DE LOS CANALES EN FUNCION 
+//DE LAS RESISTENCIAS Y LOS RESULTADOS
+
+//Ajuste de la sensibilidad del verde
+Gf = Gf * 1;
+
+//Ajuste de la sensibilidad del azul
+Bf = Bf * 1;
+
+//Ajuste de la sensibilidad del rojo
+Bf = Bf * 0.70;
+
+
+
+    
+}
+
+void calcular_porcentajes(void)
+{
+    int suma = Rf + Gf + Bf;
+    if (suma == 0) suma = 1;
+
+    Rp = (Rf * 100.0f) / suma;
+    Gp = (Gf * 100.0f) / suma;
+    Bp = (Bf * 100.0f) / suma;
+}
+
 void app_main(void)
 {
+    gpio_reset_pin(LED_R);
     gpio_set_direction(LED_R, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(LED_G);
     gpio_set_direction(LED_G, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(LED_B);
     gpio_set_direction(LED_B, GPIO_MODE_OUTPUT);
+
+    gpio_reset_pin(BTN_1);
+    gpio_set_direction(BTN_1, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(BTN_1, GPIO_PULLUP_ONLY);
+
+    gpio_reset_pin(BTN_2);
+    gpio_set_direction(BTN_2, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(BTN_2, GPIO_PULLUP_ONLY);
+
+    gpio_reset_pin(BTN_3);
+    gpio_set_direction(BTN_3, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(BTN_3, GPIO_PULLUP_ONLY);
 
     adc1_config_width(ADC_WIDTH_BIT_12);
     adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN_DB_11);
@@ -198,9 +332,6 @@ void app_main(void)
     oled_init();
     oled_clear();
 
-    int ambiente, r, g, b;
-    int r_real, g_real, b_real;
-
     char linea1[25];
     char linea2[25];
     char linea3[25];
@@ -208,78 +339,62 @@ void app_main(void)
 
     while (1)
     {
-        gpio_set_level(LED_R, 0);
-        gpio_set_level(LED_G, 0);
-        gpio_set_level(LED_B, 0);
-        vTaskDelay(pdMS_TO_TICKS(200));
+        leer_botones();
 
-        ambiente = adc1_get_raw(ADC_CHANNEL);
-
-        gpio_set_level(LED_R, 1);
-        vTaskDelay(pdMS_TO_TICKS(200));
-        r = adc1_get_raw(ADC_CHANNEL);
-        gpio_set_level(LED_R, 0);
-
-        gpio_set_level(LED_G, 1);
-        vTaskDelay(pdMS_TO_TICKS(200));
-        g = adc1_get_raw(ADC_CHANNEL);
-        gpio_set_level(LED_G, 0);
-
-        gpio_set_level(LED_B, 1);
-        vTaskDelay(pdMS_TO_TICKS(200));
-        b = adc1_get_raw(ADC_CHANNEL);
-        gpio_set_level(LED_B, 0);
-
-//RESULTADOS
-        r_real = r - ambiente;
-        g_real = g - ambiente;
-        b_real = b - ambiente;
-
-        int max = r_real;
-        int min = r_real;
-
-        if (g_real > max) max = g_real;
-        if (b_real > max) max = b_real;
-
-        if (g_real < min) min = g_real;
-        if (b_real < min) min = b_real;
-
-        const char *resultado;
-
-        if (r_real < 80 && g_real < 80 && b_real < 80)
+        if (!congelado)
         {
-            resultado = "MUY OSCURO";
+            medir_color();
         }
-        else if ((max - min) < 250)
+
+        calcular_porcentajes();
+
+        const char *resultado = detectar_color();
+
+        if (modo == 0)
         {
-            resultado = "VERDE";
-        }
-        else if (r_real > b_real)
-        {
-            resultado = "ROJO";
+            if (escala == 0)
+            {
+                printf("MODO: MEDICION RAW\n");
+                printf("R: %d | V: %d | A: %d\n", Rf, Gf, Bf);
+
+                sprintf(linea1, "MEDICION RAW");
+                sprintf(linea2, "R:%d", Rf);
+                sprintf(linea3, "V:%d", Gf);
+                sprintf(linea4, "A:%d", Bf);
+            }
+            else
+            {
+                printf("MODO: MEDICION %%\n");
+                printf("R: %.1f%% | V: %.1f%% | A: %.1f%%\n", Rp, Gp, Bp);
+
+                sprintf(linea1, "MEDICION %%");
+                sprintf(linea2, "R:%.1f%%", Rp);
+                sprintf(linea3, "V:%.1f%%", Gp);
+                sprintf(linea4, "A:%.1f%%", Bp);
+            }
         }
         else
         {
-            resultado = "AZUL";
+            printf("MODO: CLASIFICACION\n");
+            printf("COLOR: %s\n", resultado);
+
+            sprintf(linea1, "CLASIFICACION");
+            sprintf(linea2, "COLOR:");
+            sprintf(linea3, "%s", resultado);
+
+            if (congelado)
+                sprintf(linea4, "PAUSA");
+            else
+                sprintf(linea4, "ACTIVO");
         }
 
-//IMPRESION DE RESULTADOS
-        printf("\n-----------\n");
-        printf("Ambiente: %d\n", ambiente);
-        printf("R: %d | V: %d | A: %d\n", r, g, b);
-        printf("R real: %d | V real: %d | A real: %d\n", r_real, g_real, b_real);
-        printf("Resultado: %s\n", resultado);
-
-        sprintf(linea1, "COLOR: %s", resultado);
-        sprintf(linea2, "R:%d", r_real);
-        sprintf(linea3, "V:%d", g_real);
-        sprintf(linea4, "A:%d AMB:%d", b_real, ambiente);
+        printf("-----------------------------\n");
 
         oled_print_line(0, linea1);
         oled_print_line(1, linea2);
         oled_print_line(2, linea3);
         oled_print_line(3, linea4);
 
-        vTaskDelay(pdMS_TO_TICKS(2000));
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
